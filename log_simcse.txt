@@ -1,0 +1,1331 @@
+nohup: ignoring input
+2
+./model_save/qwen2_round9_qlora_rerun
+46868
+[2024-12-11 23:50:43,582] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-11 23:50:46,093] [WARNING] [runner.py:215:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-12-11 23:50:46,093] [INFO] [runner.py:607:main] cmd = /root/miniconda3/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=46868 --enable_each_rank_log=None simcse_deepspeed_mistrial_qlora_argu.py --project_name _qwen2_round9 --train_data ./output/qwen2_round7_qlora_recall_top_100_train.jsonl --model_name_or_path model/qwen-14b --per_device_train_batch_size 4 --per_device_eval_batch_size 4 --train_group_size 8 --gradient_accumulation_steps 8 --query_max_len 512 --passage_max_len 512 --earystop 0 --save_batch_steps 100000000000 --eary_stop_epoch 5 --save_per_epoch 1 --num_train_epochs 10 --learning_rate 1e-4 --num_warmup_steps 100 --weight_decay 0.01 --lr_scheduler_type cosine --seed 1234 --zero_stage 2 --deepspeed --output_dir ./model_save/qwen2_round9_qlora_rerun --gradient_checkpointing
+[2024-12-11 23:50:47,493] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-11 23:50:50,034] [INFO] [launch.py:139:main] 0 NV_LIBNCCL_PACKAGE_VERSION=2.15.5-1
+[2024-12-11 23:50:50,034] [INFO] [launch.py:139:main] 0 NV_LIBNCCL_DEV_PACKAGE_VERSION=2.15.5-1
+[2024-12-11 23:50:50,034] [INFO] [launch.py:139:main] 0 NV_LIBNCCL_PACKAGE_NAME=libnccl2
+[2024-12-11 23:50:50,034] [INFO] [launch.py:139:main] 0 NV_LIBNCCL_DEV_PACKAGE_NAME=libnccl-dev
+[2024-12-11 23:50:50,034] [INFO] [launch.py:139:main] 0 NV_LIBNCCL_PACKAGE=libnccl2=2.15.5-1+cuda11.8
+[2024-12-11 23:50:50,034] [INFO] [launch.py:139:main] 0 NV_LIBNCCL_DEV_PACKAGE=libnccl-dev=2.15.5-1+cuda11.8
+[2024-12-11 23:50:50,034] [INFO] [launch.py:139:main] 0 NCCL_VERSION=2.15.5-1
+[2024-12-11 23:50:50,034] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2024-12-11 23:50:50,034] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=2, node_rank=0
+[2024-12-11 23:50:50,034] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2024-12-11 23:50:50,034] [INFO] [launch.py:164:main] dist_world_size=2
+[2024-12-11 23:50:50,034] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2024-12-11 23:50:50,034] [INFO] [launch.py:256:main] process 2628 spawned with command: ['/root/miniconda3/bin/python', '-u', 'simcse_deepspeed_mistrial_qlora_argu.py', '--local_rank=0', '--project_name', '_qwen2_round9', '--train_data', './output/qwen2_round7_qlora_recall_top_100_train.jsonl', '--model_name_or_path', 'model/qwen-14b', '--per_device_train_batch_size', '4', '--per_device_eval_batch_size', '4', '--train_group_size', '8', '--gradient_accumulation_steps', '8', '--query_max_len', '512', '--passage_max_len', '512', '--earystop', '0', '--save_batch_steps', '100000000000', '--eary_stop_epoch', '5', '--save_per_epoch', '1', '--num_train_epochs', '10', '--learning_rate', '1e-4', '--num_warmup_steps', '100', '--weight_decay', '0.01', '--lr_scheduler_type', 'cosine', '--seed', '1234', '--zero_stage', '2', '--deepspeed', '--output_dir', './model_save/qwen2_round9_qlora_rerun', '--gradient_checkpointing']
+[2024-12-11 23:50:50,035] [INFO] [launch.py:256:main] process 2629 spawned with command: ['/root/miniconda3/bin/python', '-u', 'simcse_deepspeed_mistrial_qlora_argu.py', '--local_rank=1', '--project_name', '_qwen2_round9', '--train_data', './output/qwen2_round7_qlora_recall_top_100_train.jsonl', '--model_name_or_path', 'model/qwen-14b', '--per_device_train_batch_size', '4', '--per_device_eval_batch_size', '4', '--train_group_size', '8', '--gradient_accumulation_steps', '8', '--query_max_len', '512', '--passage_max_len', '512', '--earystop', '0', '--save_batch_steps', '100000000000', '--eary_stop_epoch', '5', '--save_per_epoch', '1', '--num_train_epochs', '10', '--learning_rate', '1e-4', '--num_warmup_steps', '100', '--weight_decay', '0.01', '--lr_scheduler_type', 'cosine', '--seed', '1234', '--zero_stage', '2', '--deepspeed', '--output_dir', './model_save/qwen2_round9_qlora_rerun', '--gradient_checkpointing']
+[2024-12-11 23:50:53,531] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-11 23:50:53,551] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/root/miniconda3/bin/python
+torch.cuda.is_available() = True
+torch.cuda.device_count() = 2
+args.local_rank = 1
+/root/miniconda3/bin/python
+torch.cuda.is_available() = True
+torch.cuda.device_count() = 2
+args.local_rank = 0
+[2024-12-11 23:50:54,487] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-12-11 23:50:54,487] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-12-11 23:50:54,639] [INFO] [comm.py:652:init_distributed] cdb=None
+`low_cpu_mem_usage` was None, now default to True since model is quantized.
+`low_cpu_mem_usage` was None, now default to True since model is quantized.
+Loading checkpoint shards:   0%|                                                                                                                               | 0/8 [00:00<?, ?it/s]Loading checkpoint shards:   0%|                                                                                                                               | 0/8 [00:00<?, ?it/s]Loading checkpoint shards:  12%|██████████████▉                                                                                                        | 1/8 [00:01<00:10,  1.47s/it]Loading checkpoint shards:  12%|██████████████▉                                                                                                        | 1/8 [00:01<00:10,  1.46s/it]Loading checkpoint shards:  25%|█████████████████████████████▊                                                                                         | 2/8 [00:02<00:08,  1.45s/it]Loading checkpoint shards:  25%|█████████████████████████████▊                                                                                         | 2/8 [00:02<00:08,  1.46s/it]Loading checkpoint shards:  38%|████████████████████████████████████████████▋                                                                          | 3/8 [00:04<00:07,  1.45s/it]Loading checkpoint shards:  38%|████████████████████████████████████████████▋                                                                          | 3/8 [00:04<00:07,  1.50s/it]Loading checkpoint shards:  50%|███████████████████████████████████████████████████████████▌                                                           | 4/8 [00:05<00:05,  1.43s/it]Loading checkpoint shards:  50%|███████████████████████████████████████████████████████████▌                                                           | 4/8 [00:05<00:05,  1.50s/it]Loading checkpoint shards:  62%|██████████████████████████████████████████████████████████████████████████▍                                            | 5/8 [00:07<00:04,  1.42s/it]Loading checkpoint shards:  62%|██████████████████████████████████████████████████████████████████████████▍                                            | 5/8 [00:07<00:04,  1.48s/it]Loading checkpoint shards:  75%|█████████████████████████████████████████████████████████████████████████████████████████▎                             | 6/8 [00:08<00:02,  1.40s/it]Loading checkpoint shards:  75%|█████████████████████████████████████████████████████████████████████████████████████████▎                             | 6/8 [00:08<00:03,  1.51s/it]Loading checkpoint shards:  88%|████████████████████████████████████████████████████████████████████████████████████████████████████████▏              | 7/8 [00:10<00:01,  1.44s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:10<00:00,  1.04s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:10<00:00,  1.28s/it]
+Loading checkpoint shards:  88%|████████████████████████████████████████████████████████████████████████████████████████████████████████▏              | 7/8 [00:10<00:01,  1.46s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:10<00:00,  1.06s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:10<00:00,  1.32s/it]
+trainable params: 275,251,200 || all params: 14,266,717,184 || trainable%: 1.9293
+trainable params: 275,251,200 || all params: 14,266,717,184 || trainable%: 1.9293
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 6558 examples [00:00, 78662.32 examples/s]
+6558
+Using /root/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Creating extension directory /root/.cache/torch_extensions/py310_cu121/fused_adam...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /root/.cache/torch_extensions/py310_cu121/fused_adam/build.ninja...
+/root/miniconda3/lib/python3.10/site-packages/torch/utils/cpp_extension.py:1965: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Building extension module fused_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+6558
+Using /root/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+[1/3] /usr/local/cuda/bin/nvcc --generate-dependencies-with-compile --dependency-output multi_tensor_adam.cuda.o.d -DTORCH_EXTENSION_NAME=fused_adam -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/root/miniconda3/lib/python3.10/site-packages/deepspeed/ops/csrc/includes -I/root/miniconda3/lib/python3.10/site-packages/deepspeed/ops/csrc/adam -isystem /root/miniconda3/lib/python3.10/site-packages/torch/include -isystem /root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /root/miniconda3/lib/python3.10/site-packages/torch/include/TH -isystem /root/miniconda3/lib/python3.10/site-packages/torch/include/THC -isystem /usr/local/cuda/include -isystem /root/miniconda3/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_80,code=compute_80 -gencode=arch=compute_80,code=sm_80 --compiler-options '-fPIC' -O3 -DVERSION_GE_1_1 -DVERSION_GE_1_3 -DVERSION_GE_1_5 -lineinfo --use_fast_math -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_80,code=compute_80 -DBF16_AVAILABLE -U__CUDA_NO_BFLOAT16_OPERATORS__ -U__CUDA_NO_BFLOAT162_OPERATORS__ -U__CUDA_NO_BFLOAT16_CONVERSIONS__ -std=c++17 -c /root/miniconda3/lib/python3.10/site-packages/deepspeed/ops/csrc/adam/multi_tensor_adam.cu -o multi_tensor_adam.cuda.o 
+[2/3] c++ -MMD -MF fused_adam_frontend.o.d -DTORCH_EXTENSION_NAME=fused_adam -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/root/miniconda3/lib/python3.10/site-packages/deepspeed/ops/csrc/includes -I/root/miniconda3/lib/python3.10/site-packages/deepspeed/ops/csrc/adam -isystem /root/miniconda3/lib/python3.10/site-packages/torch/include -isystem /root/miniconda3/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /root/miniconda3/lib/python3.10/site-packages/torch/include/TH -isystem /root/miniconda3/lib/python3.10/site-packages/torch/include/THC -isystem /usr/local/cuda/include -isystem /root/miniconda3/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17 -O3 -std=c++17 -g -Wno-reorder -DVERSION_GE_1_1 -DVERSION_GE_1_3 -DVERSION_GE_1_5 -DBF16_AVAILABLE -c /root/miniconda3/lib/python3.10/site-packages/deepspeed/ops/csrc/adam/fused_adam_frontend.cpp -o fused_adam_frontend.o 
+[3/3] c++ fused_adam_frontend.o multi_tensor_adam.cuda.o -shared -L/root/miniconda3/lib/python3.10/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/usr/local/cuda/lib64 -lcudart -o fused_adam.so
+Loading extension module fused_adam...
+Time to load fused_adam op: 22.499578714370728 seconds
+[2024-12-11 23:51:32,895] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.15.2, git-hash=unknown, git-branch=unknown
+[2024-12-11 23:51:32,895] [INFO] [comm.py:677:init_distributed] Distributed backend already initialized
+[2024-12-11 23:51:32,895] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 2
+Loading extension module fused_adam...
+Time to load fused_adam op: 21.72694754600525 seconds
+[2024-12-11 23:51:32,902] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 2
+[2024-12-11 23:51:33,281] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-12-11 23:51:33,288] [INFO] [logging.py:96:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2024-12-11 23:51:33,288] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2024-12-11 23:51:33,385] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = FusedAdam
+[2024-12-11 23:51:33,385] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=FusedAdam type=<class 'deepspeed.ops.adam.fused_adam.FusedAdam'>
+[2024-12-11 23:51:33,385] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.float16 ZeRO stage 2 optimizer
+[2024-12-11 23:51:33,386] [INFO] [stage_1_and_2.py:149:__init__] Reduce bucket size 500000000
+[2024-12-11 23:51:33,386] [INFO] [stage_1_and_2.py:150:__init__] Allgather bucket size 500000000
+[2024-12-11 23:51:33,386] [INFO] [stage_1_and_2.py:151:__init__] CPU Offload: False
+[2024-12-11 23:51:33,386] [INFO] [stage_1_and_2.py:152:__init__] Round robin gradient partitioning: False
+[2024-12-11 23:51:34,279] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2024-12-11 23:51:34,280] [INFO] [utils.py:782:see_memory_usage] MA 8.91 GB         Max_MA 9.16 GB         CA 9.19 GB         Max_CA 9 GB 
+[2024-12-11 23:51:34,280] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 36.2 GB, percent = 3.6%
+The attention layers in this model are transitioning from computing the RoPE embeddings internally through `position_ids` (2D tensor with the indexes of the tokens), to using externally computed `position_embeddings` (Tuple of tensors, containing cos and sin). In v4.46 `position_ids` will be removed and `position_embeddings` will be mandatory.
+[2024-12-11 23:51:34,434] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2024-12-11 23:51:34,434] [INFO] [utils.py:782:see_memory_usage] MA 8.91 GB         Max_MA 9.42 GB         CA 9.71 GB         Max_CA 10 GB 
+[2024-12-11 23:51:34,435] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 36.21 GB, percent = 3.6%
+[2024-12-11 23:51:34,435] [INFO] [stage_1_and_2.py:544:__init__] optimizer state initialized
+[2024-12-11 23:51:34,581] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2024-12-11 23:51:34,582] [INFO] [utils.py:782:see_memory_usage] MA 8.91 GB         Max_MA 8.91 GB         CA 9.71 GB         Max_CA 10 GB 
+[2024-12-11 23:51:34,582] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 36.21 GB, percent = 3.6%
+[2024-12-11 23:51:34,589] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer
+[2024-12-11 23:51:34,589] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2024-12-11 23:51:34,589] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = <torch.optim.lr_scheduler.LambdaLR object at 0x7f08a4695090>
+[2024-12-11 23:51:34,589] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0], mom=[(0.9, 0.95)]
+[2024-12-11 23:51:34,599] [INFO] [config.py:999:print] DeepSpeedEngine configuration:
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   amp_enabled .................. False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   amp_params ................... False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   bfloat16_enabled ............. False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   bfloat16_immediate_grad_update  False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   checkpoint_parallel_write_pipeline  False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   checkpoint_tag_validation_enabled  True
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   checkpoint_tag_validation_fail  False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f08a4756590>
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   communication_data_type ...... None
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   curriculum_enabled_legacy .... False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   curriculum_params_legacy ..... False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   data_efficiency_enabled ...... False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   dataloader_drop_last ......... False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   disable_allgather ............ False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   dump_state ................... False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   dynamic_loss_scale_args ...... {'init_scale': 65536, 'scale_window': 100, 'delayed_shift': 2, 'consecutive_hysteresis': False, 'min_scale': 1}
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   eigenvalue_enabled ........... False
+[2024-12-11 23:51:34,600] [INFO] [config.py:1003:print]   eigenvalue_gas_boundary_resolution  1
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   eigenvalue_layer_num ......... 0
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   eigenvalue_max_iter .......... 100
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   eigenvalue_stability ......... 1e-06
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   eigenvalue_tol ............... 0.01
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   eigenvalue_verbose ........... False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   elasticity_enabled ........... False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   fp16_auto_cast ............... False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   fp16_enabled ................. True
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   fp16_master_weights_and_gradients  False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   global_rank .................. 0
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   grad_accum_dtype ............. None
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   gradient_accumulation_steps .. 8
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   gradient_clipping ............ 1.0
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   gradient_predivide_factor .... 1.0
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   graph_harvesting ............. False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   initial_dynamic_scale ........ 65536
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   load_universal_checkpoint .... False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   loss_scale ................... 0
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   memory_breakdown ............. False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   mics_hierarchial_params_gather  False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   mics_shard_size .............. -1
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='step1_tensorboard/ds_tensorboard_logs/', job_name='step1_model_tensorboard') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   optimizer_legacy_fusion ...... False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   optimizer_name ............... None
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   optimizer_params ............. None
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   pld_enabled .................. False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   pld_params ................... False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   prescale_gradients ........... False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   scheduler_name ............... None
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   scheduler_params ............. None
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   seq_parallel_communication_data_type  torch.float32
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   sparse_attention ............. None
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   sparse_gradients_enabled ..... False
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   steps_per_print .............. 10
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   timers_config ................ enabled=True synchronized=True
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   train_batch_size ............. 64
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   train_micro_batch_size_per_gpu  4
+[2024-12-11 23:51:34,601] [INFO] [config.py:1003:print]   use_data_before_expert_parallel_  False
+[2024-12-11 23:51:34,602] [INFO] [config.py:1003:print]   use_node_local_storage ....... False
+[2024-12-11 23:51:34,602] [INFO] [config.py:1003:print]   wall_clock_breakdown ......... False
+[2024-12-11 23:51:34,602] [INFO] [config.py:1003:print]   weight_quantization_config ... None
+[2024-12-11 23:51:34,602] [INFO] [config.py:1003:print]   world_size ................... 2
+[2024-12-11 23:51:34,602] [INFO] [config.py:1003:print]   zero_allow_untested_optimizer  False
+[2024-12-11 23:51:34,602] [INFO] [config.py:1003:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=False load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100000000, max_in_cpu=1000000000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1000000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=30000000 param_persistence_threshold=10000 model_persistence_threshold=9223372036854775807 max_live_parameters=30000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=False use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=False pipeline_loading_checkpoint=False override_module_apply=True
+[2024-12-11 23:51:34,602] [INFO] [config.py:1003:print]   zero_enabled ................. True
+[2024-12-11 23:51:34,602] [INFO] [config.py:1003:print]   zero_force_ds_cpu_optimizer .. True
+[2024-12-11 23:51:34,602] [INFO] [config.py:1003:print]   zero_optimization_stage ...... 2
+[2024-12-11 23:51:34,602] [INFO] [config.py:989:print_user_config]   json = {
+    "train_batch_size": 64, 
+    "train_micro_batch_size_per_gpu": 4, 
+    "steps_per_print": 10, 
+    "zero_optimization": {
+        "stage": 2, 
+        "offload_param": {
+            "device": "none"
+        }, 
+        "offload_optimizer": {
+            "device": "none"
+        }, 
+        "stage3_param_persistence_threshold": 1.000000e+04, 
+        "stage3_max_live_parameters": 3.000000e+07, 
+        "stage3_prefetch_bucket_size": 3.000000e+07, 
+        "memory_efficient_linear": false
+    }, 
+    "fp16": {
+        "enabled": true, 
+        "loss_scale_window": 100
+    }, 
+    "gradient_clipping": 1.0, 
+    "prescale_gradients": false, 
+    "wall_clock_breakdown": false, 
+    "hybrid_engine": {
+        "enabled": false, 
+        "max_out_tokens": 512, 
+        "inference_tp_size": 1, 
+        "release_inference_cache": false, 
+        "pin_parameters": true, 
+        "tp_gather_partition_size": 8
+    }, 
+    "tensorboard": {
+        "enabled": false, 
+        "output_path": "step1_tensorboard/ds_tensorboard_logs/", 
+        "job_name": "step1_model_tensorboard"
+    }
+}
+***** Running training *****
+***** Evaluating perplexity, Epoch 0/10 *****
+Beginning of Epoch 1/10, Total Micro Batches 820
+The attention layers in this model are transitioning from computing the RoPE embeddings internally through `position_ids` (2D tensor with the indexes of the tokens), to using externally computed `position_embeddings` (Tuple of tensors, containing cos and sin). In v4.46 `position_ids` will be removed and `position_embeddings` will be mandatory.
+Beginning of Epoch 1/10, curr_step:0/8200 curr_loss 6.38671875 lr:0.0 use time:1.674170732498169s
+[2024-12-11 23:51:45,622] [INFO] [loss_scaler.py:190:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 65536, but hysteresis is 2. Reducing hysteresis to 1
+Beginning of Epoch 1/10, curr_step:10/8200 curr_loss 10.4921875 lr:0.0 use time:13.34798812866211s
+[2024-12-11 23:51:56,595] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 65536, reducing to 32768
+Beginning of Epoch 1/10, curr_step:20/8200 curr_loss 8.8359375 lr:0.0 use time:14.347598314285278s
+Beginning of Epoch 1/10, curr_step:30/8200 curr_loss 9.0 lr:1.0000000000000002e-06 use time:14.185038089752197s
+Beginning of Epoch 1/10, curr_step:40/8200 curr_loss 9.0390625 lr:3e-06 use time:13.857616662979126s
+Beginning of Epoch 1/10, curr_step:50/8200 curr_loss 6.83984375 lr:4.000000000000001e-06 use time:14.397337198257446s
+[2024-12-11 23:52:53,466] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 32768, reducing to 16384
+Beginning of Epoch 1/10, curr_step:60/8200 curr_loss 5.28515625 lr:4.000000000000001e-06 use time:13.941662311553955s
+Beginning of Epoch 1/10, curr_step:70/8200 curr_loss 6.84765625 lr:5e-06 use time:13.754796981811523s
+[2024-12-11 23:53:26,593] [INFO] [logging.py:96:log_dist] [Rank 0] step=10, skipped=3, lr=[7.000000000000001e-06], mom=[(0.9, 0.95)]
+[2024-12-11 23:53:26,608] [INFO] [timer.py:264:stop] epoch=0/micro_step=80/global_step=10, RunningAvgSamplesPerSec=5.713457624726056, CurrSamplesPerSec=5.782852970614418, MemAllocated=10.21GB, MaxMemAllocated=39.68GB
+Beginning of Epoch 1/10, curr_step:80/8200 curr_loss 4.84375 lr:7.000000000000001e-06 use time:13.834038496017456s
+Beginning of Epoch 1/10, curr_step:90/8200 curr_loss 7.85546875 lr:8.000000000000001e-06 use time:14.889033555984497s
+Beginning of Epoch 1/10, curr_step:100/8200 curr_loss 8.53125 lr:9e-06 use time:14.593813419342041s
+Beginning of Epoch 1/10, curr_step:110/8200 curr_loss 6.296875 lr:1e-05 use time:13.559961795806885s
+Beginning of Epoch 1/10, curr_step:120/8200 curr_loss 4.53125 lr:1.2e-05 use time:14.21155309677124s
+Beginning of Epoch 1/10, curr_step:130/8200 curr_loss 9.640625 lr:1.3000000000000001e-05 use time:13.81603217124939s
+Beginning of Epoch 1/10, curr_step:140/8200 curr_loss 5.21875 lr:1.4000000000000001e-05 use time:13.898606061935425s
+Beginning of Epoch 1/10, curr_step:150/8200 curr_loss 6.59765625 lr:1.5e-05 use time:13.813469171524048s
+[2024-12-11 23:55:19,333] [INFO] [logging.py:96:log_dist] [Rank 0] step=20, skipped=3, lr=[1.7000000000000003e-05], mom=[(0.9, 0.95)]
+[2024-12-11 23:55:19,348] [INFO] [timer.py:264:stop] epoch=0/micro_step=160/global_step=20, RunningAvgSamplesPerSec=5.706793962794998, CurrSamplesPerSec=5.73055367783211, MemAllocated=10.21GB, MaxMemAllocated=39.88GB
+Beginning of Epoch 1/10, curr_step:160/8200 curr_loss 4.46875 lr:1.7000000000000003e-05 use time:14.387201070785522s
+Beginning of Epoch 1/10, curr_step:170/8200 curr_loss 5.0390625 lr:1.8e-05 use time:14.109071969985962s
+Beginning of Epoch 1/10, curr_step:180/8200 curr_loss 5.796875 lr:1.9e-05 use time:14.080428123474121s
+Beginning of Epoch 1/10, curr_step:190/8200 curr_loss 6.17578125 lr:2e-05 use time:14.745922088623047s
+Beginning of Epoch 1/10, curr_step:200/8200 curr_loss 5.66015625 lr:2.2000000000000003e-05 use time:13.77844786643982s
+Beginning of Epoch 1/10, curr_step:210/8200 curr_loss 5.640625 lr:2.3000000000000003e-05 use time:14.613814353942871s
+Beginning of Epoch 1/10, curr_step:220/8200 curr_loss 4.75 lr:2.4e-05 use time:14.223077297210693s
+Beginning of Epoch 1/10, curr_step:230/8200 curr_loss 4.03515625 lr:2.5e-05 use time:13.921276330947876s
+[2024-12-11 23:57:13,264] [INFO] [logging.py:96:log_dist] [Rank 0] step=30, skipped=3, lr=[2.7000000000000002e-05], mom=[(0.9, 0.95)]
+[2024-12-11 23:57:13,279] [INFO] [timer.py:264:stop] epoch=0/micro_step=240/global_step=30, RunningAvgSamplesPerSec=5.683935282587987, CurrSamplesPerSec=5.705453037866339, MemAllocated=10.21GB, MaxMemAllocated=43.69GB
+Beginning of Epoch 1/10, curr_step:240/8200 curr_loss 3.681640625 lr:2.7000000000000002e-05 use time:14.148096323013306s
+Beginning of Epoch 1/10, curr_step:250/8200 curr_loss 4.4921875 lr:2.8000000000000003e-05 use time:14.112086296081543s
+Beginning of Epoch 1/10, curr_step:260/8200 curr_loss 3.21484375 lr:2.9e-05 use time:14.124608278274536s
+Beginning of Epoch 1/10, curr_step:270/8200 curr_loss 3.568359375 lr:3e-05 use time:13.67915964126587s
+Beginning of Epoch 1/10, curr_step:280/8200 curr_loss 3.369140625 lr:3.2000000000000005e-05 use time:14.669905662536621s
+Beginning of Epoch 1/10, curr_step:290/8200 curr_loss 3.33984375 lr:3.3e-05 use time:13.94849705696106s
+Beginning of Epoch 1/10, curr_step:300/8200 curr_loss 3.466796875 lr:3.4000000000000007e-05 use time:14.395795822143555s
+Beginning of Epoch 1/10, curr_step:310/8200 curr_loss 3.0078125 lr:3.5e-05 use time:14.34788990020752s
+[2024-12-11 23:59:06,773] [INFO] [logging.py:96:log_dist] [Rank 0] step=40, skipped=3, lr=[3.7e-05], mom=[(0.9, 0.95)]
+[2024-12-11 23:59:06,786] [INFO] [timer.py:264:stop] epoch=0/micro_step=320/global_step=40, RunningAvgSamplesPerSec=5.67871327889594, CurrSamplesPerSec=5.615244146325474, MemAllocated=10.21GB, MaxMemAllocated=43.69GB
+Beginning of Epoch 1/10, curr_step:320/8200 curr_loss 2.705078125 lr:3.7e-05 use time:14.056849718093872s
+Beginning of Epoch 1/10, curr_step:330/8200 curr_loss 3.462890625 lr:3.8e-05 use time:13.843031883239746s
+Beginning of Epoch 1/10, curr_step:340/8200 curr_loss 3.23046875 lr:3.9000000000000006e-05 use time:14.274100542068481s
+Beginning of Epoch 1/10, curr_step:350/8200 curr_loss 3.126953125 lr:4e-05 use time:14.586473941802979s
+Beginning of Epoch 1/10, curr_step:360/8200 curr_loss 2.47265625 lr:4.2e-05 use time:14.24237060546875s
+Beginning of Epoch 1/10, curr_step:370/8200 curr_loss 3.455078125 lr:4.3e-05 use time:14.858585596084595s
+Beginning of Epoch 1/10, curr_step:380/8200 curr_loss 1.80078125 lr:4.4000000000000006e-05 use time:14.048864364624023s
+Beginning of Epoch 1/10, curr_step:390/8200 curr_loss 3.24609375 lr:4.5e-05 use time:14.129776000976562s
+[2024-12-12 00:01:00,772] [INFO] [logging.py:96:log_dist] [Rank 0] step=50, skipped=3, lr=[4.7e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:01:00,787] [INFO] [timer.py:264:stop] epoch=0/micro_step=400/global_step=50, RunningAvgSamplesPerSec=5.670844331523066, CurrSamplesPerSec=5.660327232511236, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 1/10, curr_step:400/8200 curr_loss 1.6318359375 lr:4.7e-05 use time:14.1560800075531s
+Beginning of Epoch 1/10, curr_step:410/8200 curr_loss 1.328125 lr:4.8e-05 use time:14.137098550796509s
+Beginning of Epoch 1/10, curr_step:420/8200 curr_loss 2.365234375 lr:4.9e-05 use time:14.26619267463684s
+Beginning of Epoch 1/10, curr_step:430/8200 curr_loss 1.271484375 lr:5e-05 use time:14.99212646484375s
+Beginning of Epoch 1/10, curr_step:440/8200 curr_loss 1.3583984375 lr:5.2000000000000004e-05 use time:15.052263975143433s
+Beginning of Epoch 1/10, curr_step:450/8200 curr_loss 1.9521484375 lr:5.300000000000001e-05 use time:14.418280363082886s
+Beginning of Epoch 1/10, curr_step:460/8200 curr_loss 1.1748046875 lr:5.4000000000000005e-05 use time:14.451453685760498s
+Beginning of Epoch 1/10, curr_step:470/8200 curr_loss 0.95068359375 lr:5.500000000000001e-05 use time:14.07463788986206s
+[2024-12-12 00:02:56,383] [INFO] [logging.py:96:log_dist] [Rank 0] step=60, skipped=3, lr=[5.6999999999999996e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:02:56,398] [INFO] [timer.py:264:stop] epoch=0/micro_step=480/global_step=60, RunningAvgSamplesPerSec=5.651485360414792, CurrSamplesPerSec=5.734908343757483, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 1/10, curr_step:480/8200 curr_loss 1.3974609375 lr:5.6999999999999996e-05 use time:14.04560899734497s
+Beginning of Epoch 1/10, curr_step:490/8200 curr_loss 1.4443359375 lr:5.8e-05 use time:13.697862148284912s
+Beginning of Epoch 1/10, curr_step:500/8200 curr_loss 2.9296875 lr:5.9e-05 use time:14.694955587387085s
+Beginning of Epoch 1/10, curr_step:510/8200 curr_loss 2.111328125 lr:6e-05 use time:14.32609224319458s
+Beginning of Epoch 1/10, curr_step:520/8200 curr_loss 1.1806640625 lr:6.2e-05 use time:14.147173166275024s
+Beginning of Epoch 1/10, curr_step:530/8200 curr_loss 0.92822265625 lr:6.3e-05 use time:14.185121536254883s
+Beginning of Epoch 1/10, curr_step:540/8200 curr_loss 0.68115234375 lr:6.400000000000001e-05 use time:14.261993408203125s
+Beginning of Epoch 1/10, curr_step:550/8200 curr_loss 0.439697265625 lr:6.500000000000001e-05 use time:14.20456051826477s
+[2024-12-12 00:04:49,411] [INFO] [logging.py:96:log_dist] [Rank 0] step=70, skipped=3, lr=[6.7e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:04:49,425] [INFO] [timer.py:264:stop] epoch=0/micro_step=560/global_step=70, RunningAvgSamplesPerSec=5.656685314331008, CurrSamplesPerSec=5.876033617555041, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 1/10, curr_step:560/8200 curr_loss 0.73388671875 lr:6.7e-05 use time:13.772697448730469s
+Beginning of Epoch 1/10, curr_step:570/8200 curr_loss 0.67529296875 lr:6.800000000000001e-05 use time:14.392065525054932s
+Beginning of Epoch 1/10, curr_step:580/8200 curr_loss 1.51171875 lr:6.9e-05 use time:14.014738082885742s
+Beginning of Epoch 1/10, curr_step:590/8200 curr_loss 1.3974609375 lr:7e-05 use time:14.38836669921875s
+Beginning of Epoch 1/10, curr_step:600/8200 curr_loss 2.09375 lr:7.2e-05 use time:14.510920286178589s
+Beginning of Epoch 1/10, curr_step:610/8200 curr_loss 0.43408203125 lr:7.3e-05 use time:13.776752471923828s
+Beginning of Epoch 1/10, curr_step:620/8200 curr_loss 0.69580078125 lr:7.4e-05 use time:14.141730070114136s
+Beginning of Epoch 1/10, curr_step:630/8200 curr_loss 0.916015625 lr:7.500000000000001e-05 use time:13.860917091369629s
+[2024-12-12 00:06:43,100] [INFO] [logging.py:96:log_dist] [Rank 0] step=80, skipped=3, lr=[7.7e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:06:43,115] [INFO] [timer.py:264:stop] epoch=0/micro_step=640/global_step=80, RunningAvgSamplesPerSec=5.656240266561402, CurrSamplesPerSec=5.479709044146529, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 1/10, curr_step:640/8200 curr_loss 0.88427734375 lr:7.7e-05 use time:14.560007333755493s
+Beginning of Epoch 1/10, curr_step:650/8200 curr_loss 2.958984375 lr:7.800000000000001e-05 use time:13.552653551101685s
+Beginning of Epoch 1/10, curr_step:660/8200 curr_loss 1.3388671875 lr:7.900000000000001e-05 use time:13.791699647903442s
+Beginning of Epoch 1/10, curr_step:670/8200 curr_loss 1.51953125 lr:8e-05 use time:14.219682693481445s
+Beginning of Epoch 1/10, curr_step:680/8200 curr_loss 1.119140625 lr:8.2e-05 use time:14.555384397506714s
+Beginning of Epoch 1/10, curr_step:690/8200 curr_loss 1.388671875 lr:8.3e-05 use time:13.455889463424683s
+Beginning of Epoch 1/10, curr_step:700/8200 curr_loss 0.88671875 lr:8.4e-05 use time:14.225072383880615s
+Beginning of Epoch 1/10, curr_step:710/8200 curr_loss 1.5234375 lr:8.5e-05 use time:14.645261764526367s
+[2024-12-12 00:08:35,651] [INFO] [logging.py:96:log_dist] [Rank 0] step=90, skipped=3, lr=[8.7e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:08:35,666] [INFO] [timer.py:264:stop] epoch=0/micro_step=720/global_step=90, RunningAvgSamplesPerSec=5.6623727885502095, CurrSamplesPerSec=5.772525296532924, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 1/10, curr_step:720/8200 curr_loss 0.8603515625 lr:8.7e-05 use time:14.048119306564331s
+Beginning of Epoch 1/10, curr_step:730/8200 curr_loss 0.58837890625 lr:8.800000000000001e-05 use time:14.35480523109436s
+Beginning of Epoch 1/10, curr_step:740/8200 curr_loss 1.4150390625 lr:8.900000000000001e-05 use time:14.39443325996399s
+Beginning of Epoch 1/10, curr_step:750/8200 curr_loss 1.7646484375 lr:9e-05 use time:14.480819702148438s
+Beginning of Epoch 1/10, curr_step:760/8200 curr_loss 0.5478515625 lr:9.200000000000001e-05 use time:13.814525365829468s
+Beginning of Epoch 1/10, curr_step:770/8200 curr_loss 1.2255859375 lr:9.300000000000001e-05 use time:14.81223201751709s
+Beginning of Epoch 1/10, curr_step:780/8200 curr_loss 0.281005859375 lr:9.4e-05 use time:14.271093368530273s
+Beginning of Epoch 1/10, curr_step:790/8200 curr_loss 0.7509765625 lr:9.5e-05 use time:13.906867742538452s
+[2024-12-12 00:10:29,853] [INFO] [logging.py:96:log_dist] [Rank 0] step=100, skipped=3, lr=[9.7e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:10:29,867] [INFO] [timer.py:264:stop] epoch=0/micro_step=800/global_step=100, RunningAvgSamplesPerSec=5.6589490329060474, CurrSamplesPerSec=5.745471247460484, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 1/10, curr_step:800/8200 curr_loss 1.7685546875 lr:9.7e-05 use time:14.16494083404541s
+Beginning of Epoch 1/10, curr_step:810/8200 curr_loss 0.6630859375 lr:9.8e-05 use time:13.747751474380493s
+saving model ...
+saving success ...
+Beginning of Epoch 2/10, Total Micro Batches 820
+Beginning of Epoch 2/10, curr_step:820/8200 curr_loss 0.93359375 lr:9.900000000000001e-05 use time:14.67048716545105s
+Beginning of Epoch 2/10, curr_step:830/8200 curr_loss 0.65087890625 lr:0.0001 use time:13.380862951278687s
+Beginning of Epoch 2/10, curr_step:840/8200 curr_loss 1.0400390625 lr:9.999885887768996e-05 use time:14.431780338287354s
+Beginning of Epoch 2/10, curr_step:850/8200 curr_loss 0.8857421875 lr:9.999743248701019e-05 use time:14.576915502548218s
+Beginning of Epoch 2/10, curr_step:860/8200 curr_loss 0.2347412109375 lr:9.999543556284623e-05 use time:13.788313627243042s
+Beginning of Epoch 2/10, curr_step:870/8200 curr_loss 0.61181640625 lr:9.99928681279855e-05 use time:14.315629959106445s
+[2024-12-12 00:12:22,810] [INFO] [logging.py:96:log_dist] [Rank 0] step=110, skipped=3, lr=[9.998602184987425e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:12:22,825] [INFO] [timer.py:264:stop] epoch=1/micro_step=60/global_step=110, RunningAvgSamplesPerSec=5.665913321082165, CurrSamplesPerSec=5.721285246307299, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 2/10, curr_step:880/8200 curr_loss 0.272705078125 lr:9.998602184987425e-05 use time:14.02190613746643s
+Beginning of Epoch 2/10, curr_step:890/8200 curr_loss 1.0029296875 lr:9.998174308474836e-05 use time:14.251975536346436s
+Beginning of Epoch 2/10, curr_step:900/8200 curr_loss 1.3447265625 lr:9.997689396517407e-05 use time:13.928893327713013s
+Beginning of Epoch 2/10, curr_step:910/8200 curr_loss 0.36083984375 lr:9.99714745464859e-05 use time:14.172955751419067s
+Beginning of Epoch 2/10, curr_step:920/8200 curr_loss 0.333984375 lr:9.995892506564462e-05 use time:14.348611116409302s
+Beginning of Epoch 2/10, curr_step:930/8200 curr_loss 0.468017578125 lr:9.995179514669684e-05 use time:13.844430446624756s
+Beginning of Epoch 2/10, curr_step:940/8200 curr_loss 0.42529296875 lr:9.99440952150442e-05 use time:14.190017223358154s
+Beginning of Epoch 2/10, curr_step:950/8200 curr_loss 0.822265625 lr:9.993582535855263e-05 use time:13.877481698989868s
+[2024-12-12 00:14:15,314] [INFO] [logging.py:96:log_dist] [Rank 0] step=120, skipped=3, lr=[9.991757625503298e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:14:15,329] [INFO] [timer.py:264:stop] epoch=1/micro_step=140/global_step=120, RunningAvgSamplesPerSec=5.669912880237056, CurrSamplesPerSec=5.796978257154542, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 2/10, curr_step:960/8200 curr_loss 1.015625 lr:9.991757625503298e-05 use time:13.935327291488647s
+Beginning of Epoch 2/10, curr_step:970/8200 curr_loss 0.599609375 lr:9.990759721625005e-05 use time:13.985926151275635s
+Beginning of Epoch 2/10, curr_step:980/8200 curr_loss 0.34765625 lr:9.989704866911618e-05 use time:14.665722846984863s
+Beginning of Epoch 2/10, curr_step:990/8200 curr_loss 0.896484375 lr:9.988593073400354e-05 use time:14.05956768989563s
+Beginning of Epoch 2/10, curr_step:1000/8200 curr_loss 0.26806640625 lr:9.986198721381631e-05 use time:14.107738733291626s
+Beginning of Epoch 2/10, curr_step:1010/8200 curr_loss 0.341796875 lr:9.984916190196736e-05 use time:14.973030090332031s
+Beginning of Epoch 2/10, curr_step:1020/8200 curr_loss 0.74169921875 lr:9.983576774858776e-05 use time:14.123043537139893s
+Beginning of Epoch 2/10, curr_step:1030/8200 curr_loss 0.734375 lr:9.982180490652165e-05 use time:14.36390471458435s
+[2024-12-12 00:16:09,916] [INFO] [logging.py:96:log_dist] [Rank 0] step=130, skipped=3, lr=[9.979217380015173e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:16:09,931] [INFO] [timer.py:264:stop] epoch=1/micro_step=220/global_step=130, RunningAvgSamplesPerSec=5.665238303626094, CurrSamplesPerSec=5.654053934138228, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 2/10, curr_step:1040/8200 curr_loss 1.080078125 lr:9.979217380015173e-05 use time:14.445406436920166s
+Beginning of Epoch 2/10, curr_step:1050/8200 curr_loss 1.390625 lr:9.977650587397604e-05 use time:13.710806846618652s
+Beginning of Epoch 2/10, curr_step:1060/8200 curr_loss 1.3779296875 lr:9.976026993536625e-05 use time:14.175424098968506s
+Beginning of Epoch 2/10, curr_step:1070/8200 curr_loss 1.1787109375 lr:9.974346616959476e-05 use time:14.168903827667236s
+Beginning of Epoch 2/10, curr_step:1080/8200 curr_loss 0.4970703125 lr:9.970815593005247e-05 use time:14.023537158966064s
+Beginning of Epoch 2/10, curr_step:1090/8200 curr_loss 0.73779296875 lr:9.968964985921582e-05 use time:14.118828058242798s
+Beginning of Epoch 2/10, curr_step:1100/8200 curr_loss 1.2685546875 lr:9.967057676708125e-05 use time:14.833983421325684s
+Beginning of Epoch 2/10, curr_step:1110/8200 curr_loss 1.8232421875 lr:9.965093687129668e-05 use time:14.505298852920532s
+[2024-12-12 00:18:04,035] [INFO] [logging.py:96:log_dist] [Rank 0] step=140, skipped=3, lr=[9.960995757170639e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:18:04,050] [INFO] [timer.py:264:stop] epoch=1/micro_step=300/global_step=140, RunningAvgSamplesPerSec=5.662913512022649, CurrSamplesPerSec=5.5421389191308315, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 2/10, curr_step:1120/8200 curr_loss 0.4111328125 lr:9.960995757170639e-05 use time:14.361989259719849s
+Beginning of Epoch 2/10, curr_step:1130/8200 curr_loss 0.48193359375 lr:9.958861863552595e-05 use time:14.064815044403076s
+Beginning of Epoch 2/10, curr_step:1140/8200 curr_loss 0.72412109375 lr:9.956671383094069e-05 use time:13.810201644897461s
+Beginning of Epoch 2/10, curr_step:1150/8200 curr_loss 1.5107421875 lr:9.954424340791196e-05 use time:13.700304985046387s
+Beginning of Epoch 2/10, curr_step:1160/8200 curr_loss 2.421875 lr:9.949760673863846e-05 use time:14.33345651626587s
+Beginning of Epoch 2/10, curr_step:1170/8200 curr_loss 1.16015625 lr:9.947344102457667e-05 use time:14.448423385620117s
+Beginning of Epoch 2/10, curr_step:1180/8200 curr_loss 1.54296875 lr:9.944871075643124e-05 use time:14.259472131729126s
+Beginning of Epoch 2/10, curr_step:1190/8200 curr_loss 1.5322265625 lr:9.942341621640558e-05 use time:14.595860242843628s
+[2024-12-12 00:19:57,181] [INFO] [logging.py:96:log_dist] [Rank 0] step=150, skipped=3, lr=[9.937113548171914e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:19:57,195] [INFO] [timer.py:264:stop] epoch=1/micro_step=380/global_step=150, RunningAvgSamplesPerSec=5.664059861284827, CurrSamplesPerSec=5.719342421484299, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 2/10, curr_step:1200/8200 curr_loss 1.1708984375 lr:9.937113548171914e-05 use time:14.06842041015625s
+Beginning of Epoch 2/10, curr_step:1210/8200 curr_loss 0.587890625 lr:9.934414988364722e-05 use time:13.910999536514282s
+Beginning of Epoch 2/10, curr_step:1220/8200 curr_loss 0.29931640625 lr:9.93166012068659e-05 use time:14.610045194625854s
+Beginning of Epoch 2/10, curr_step:1230/8200 curr_loss 1.32421875 lr:9.928848976574019e-05 use time:14.066519975662231s
+Beginning of Epoch 2/10, curr_step:1240/8200 curr_loss 0.1749267578125 lr:9.923057988002117e-05 use time:14.119643688201904s
+Beginning of Epoch 2/10, curr_step:1250/8200 curr_loss 0.73828125 lr:9.920078209625236e-05 use time:14.913293600082397s
+Beginning of Epoch 2/10, curr_step:1260/8200 curr_loss 0.58154296875 lr:9.917042286978064e-05 use time:14.630591630935669s
+Beginning of Epoch 2/10, curr_step:1270/8200 curr_loss 1.30859375 lr:9.913950254704291e-05 use time:14.328725814819336s
+[2024-12-12 00:21:52,092] [INFO] [logging.py:96:log_dist] [Rank 0] step=160, skipped=3, lr=[9.907598003052701e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:21:52,107] [INFO] [timer.py:264:stop] epoch=1/micro_step=460/global_step=160, RunningAvgSamplesPerSec=5.659643599275335, CurrSamplesPerSec=5.610058645791238, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 2/10, curr_step:1280/8200 curr_loss 0.98291015625 lr:9.907598003052701e-05 use time:14.308446645736694s
+Beginning of Epoch 2/10, curr_step:1290/8200 curr_loss 0.544921875 lr:9.904337856162053e-05 use time:13.840819597244263s
+Beginning of Epoch 2/10, curr_step:1300/8200 curr_loss 0.66650390625 lr:9.90102174461831e-05 use time:14.341179847717285s
+Beginning of Epoch 2/10, curr_step:1310/8200 curr_loss 0.58984375 lr:9.897649706262473e-05 use time:13.519864797592163s
+Beginning of Epoch 2/10, curr_step:1320/8200 curr_loss 1.9892578125 lr:9.890738003669029e-05 use time:14.42232060432434s
+Beginning of Epoch 2/10, curr_step:1330/8200 curr_loss 1.359375 lr:9.887198418302628e-05 use time:14.205458641052246s
+Beginning of Epoch 2/10, curr_step:1340/8200 curr_loss 0.366455078125 lr:9.883603063865641e-05 use time:13.831836938858032s
+Beginning of Epoch 2/10, curr_step:1350/8200 curr_loss 1.97265625 lr:9.879951981385578e-05 use time:14.096609115600586s
+[2024-12-12 00:23:45,212] [INFO] [logging.py:96:log_dist] [Rank 0] step=170, skipped=3, lr=[9.87248279958541e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:23:45,226] [INFO] [timer.py:264:stop] epoch=1/micro_step=540/global_step=170, RunningAvgSamplesPerSec=5.660988729877356, CurrSamplesPerSec=5.466018104708413, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 2/10, curr_step:1360/8200 curr_loss 0.38232421875 lr:9.87248279958541e-05 use time:14.72832727432251s
+Beginning of Epoch 2/10, curr_step:1370/8200 curr_loss 0.06439208984375 lr:9.86866478549805e-05 use time:13.863510847091675s
+Beginning of Epoch 2/10, curr_step:1380/8200 curr_loss 1.1064453125 lr:9.864791213832125e-05 use time:14.035772800445557s
+Beginning of Epoch 2/10, curr_step:1390/8200 curr_loss 0.09625244140625 lr:9.860862128789953e-05 use time:13.847850561141968s
+Beginning of Epoch 2/10, curr_step:1400/8200 curr_loss 1.158203125 lr:9.852837598553008e-05 use time:14.290958404541016s
+Beginning of Epoch 2/10, curr_step:1410/8200 curr_loss 0.55322265625 lr:9.848742244928203e-05 use time:14.167730569839478s
+Beginning of Epoch 2/10, curr_step:1420/8200 curr_loss 1.20703125 lr:9.844591561066034e-05 use time:14.029751777648926s
+Beginning of Epoch 2/10, curr_step:1430/8200 curr_loss 0.1593017578125 lr:9.840385594331022e-05 use time:13.906780242919922s
+[2024-12-12 00:25:37,993] [INFO] [logging.py:96:log_dist] [Rank 0] step=180, skipped=3, lr=[9.831808004854206e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:25:38,008] [INFO] [timer.py:264:stop] epoch=1/micro_step=620/global_step=180, RunningAvgSamplesPerSec=5.663168222316781, CurrSamplesPerSec=5.41011901553983, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 2/10, curr_step:1440/8200 curr_loss 0.3212890625 lr:9.831808004854206e-05 use time:14.693536043167114s
+Beginning of Epoch 2/10, curr_step:1450/8200 curr_loss 0.73486328125 lr:9.827436479993469e-05 use time:13.86514163017273s
+Beginning of Epoch 2/10, curr_step:1460/8200 curr_loss 1.384765625 lr:9.823009868020901e-05 use time:14.386561870574951s
+Beginning of Epoch 2/10, curr_step:1470/8200 curr_loss 0.4228515625 lr:9.818528219449705e-05 use time:14.213018417358398s
+Beginning of Epoch 2/10, curr_step:1480/8200 curr_loss 1.0068359375 lr:9.809400017703829e-05 use time:13.95746374130249s
+Beginning of Epoch 2/10, curr_step:1490/8200 curr_loss 0.96337890625 lr:9.804753568693394e-05 use time:13.962777376174927s
+Beginning of Epoch 2/10, curr_step:1500/8200 curr_loss 0.351806640625 lr:9.80005229141163e-05 use time:14.299496412277222s
+Beginning of Epoch 2/10, curr_step:1510/8200 curr_loss 0.2158203125 lr:9.795296239506012e-05 use time:13.818811416625977s
+[2024-12-12 00:27:31,172] [INFO] [logging.py:96:log_dist] [Rank 0] step=190, skipped=3, lr=[9.78562002953774e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:27:31,187] [INFO] [timer.py:264:stop] epoch=1/micro_step=700/global_step=190, RunningAvgSamplesPerSec=5.664012835920468, CurrSamplesPerSec=5.472201563585746, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 2/10, curr_step:1520/8200 curr_loss 0.217041015625 lr:9.78562002953774e-05 use time:14.636141777038574s
+Beginning of Epoch 2/10, curr_step:1530/8200 curr_loss 1.208984375 lr:9.780699981892793e-05 use time:14.873607397079468s
+Beginning of Epoch 2/10, curr_step:1540/8200 curr_loss 0.64599609375 lr:9.775725380458146e-05 use time:14.136114358901978s
+Beginning of Epoch 2/10, curr_step:1550/8200 curr_loss 0.372314453125 lr:9.770696282000244e-05 use time:13.976621150970459s
+Beginning of Epoch 2/10, curr_step:1560/8200 curr_loss 0.301025390625 lr:9.760474824189222e-05 use time:14.431674480438232s
+Beginning of Epoch 2/10, curr_step:1570/8200 curr_loss 1.591796875 lr:9.755282581475769e-05 use time:14.231683254241943s
+Beginning of Epoch 2/10, curr_step:1580/8200 curr_loss 0.462158203125 lr:9.750036075017069e-05 use time:13.839374303817749s
+Beginning of Epoch 2/10, curr_step:1590/8200 curr_loss 0.52978515625 lr:9.744735364682346e-05 use time:14.460146427154541s
+[2024-12-12 00:29:25,404] [INFO] [logging.py:96:log_dist] [Rank 0] step=200, skipped=3, lr=[9.733971574953726e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:29:25,420] [INFO] [timer.py:264:stop] epoch=1/micro_step=780/global_step=200, RunningAvgSamplesPerSec=5.662120693018802, CurrSamplesPerSec=5.619068375347994, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 2/10, curr_step:1600/8200 curr_loss 0.814453125 lr:9.733971574953726e-05 use time:14.326571226119995s
+Beginning of Epoch 2/10, curr_step:1610/8200 curr_loss 0.1456298828125 lr:9.728508618388186e-05 use time:14.123278617858887s
+Beginning of Epoch 2/10, curr_step:1620/8200 curr_loss 0.62353515625 lr:9.722991703601936e-05 use time:14.101656913757324s
+Beginning of Epoch 2/10, curr_step:1630/8200 curr_loss 0.8955078125 lr:9.717420893549902e-05 use time:13.605505228042603s
+saving model ...
+saving success ...
+Beginning of Epoch 3/10, Total Micro Batches 820
+Beginning of Epoch 3/10, curr_step:1640/8200 curr_loss 0.99951171875 lr:9.706117842542518e-05 use time:14.447290658950806s
+Beginning of Epoch 3/10, curr_step:1650/8200 curr_loss 0.2398681640625 lr:9.700385730569171e-05 use time:13.532527446746826s
+Beginning of Epoch 3/10, curr_step:1660/8200 curr_loss 0.88330078125 lr:9.694599981292578e-05 use time:14.585447072982788s
+Beginning of Epoch 3/10, curr_step:1670/8200 curr_loss 0.0750732421875 lr:9.688760660735402e-05 use time:14.227275848388672s
+[2024-12-12 00:31:18,085] [INFO] [logging.py:96:log_dist] [Rank 0] step=210, skipped=3, lr=[9.676921572925776e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:31:18,100] [INFO] [timer.py:264:stop] epoch=2/micro_step=40/global_step=210, RunningAvgSamplesPerSec=5.666382873256532, CurrSamplesPerSec=5.683023969026566, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 3/10, curr_step:1680/8200 curr_loss 0.1304931640625 lr:9.676921572925776e-05 use time:14.022989988327026s
+Beginning of Epoch 3/10, curr_step:1690/8200 curr_loss 1.2578125 lr:9.670921940772186e-05 use time:14.225762128829956s
+Beginning of Epoch 3/10, curr_step:1700/8200 curr_loss 0.15673828125 lr:9.664869007534184e-05 use time:14.126054763793945s
+Beginning of Epoch 3/10, curr_step:1710/8200 curr_loss 0.203857421875 lr:9.658762842283343e-05 use time:13.995760917663574s
+Beginning of Epoch 3/10, curr_step:1720/8200 curr_loss 0.45361328125 lr:9.646391095065839e-05 use time:14.279633045196533s
+Beginning of Epoch 3/10, curr_step:1730/8200 curr_loss 0.433837890625 lr:9.640125654276346e-05 use time:14.093673467636108s
+Beginning of Epoch 3/10, curr_step:1740/8200 curr_loss 0.18994140625 lr:9.633807263826744e-05 use time:14.37199068069458s
+Beginning of Epoch 3/10, curr_step:1750/8200 curr_loss 0.93701171875 lr:9.627435995817799e-05 use time:14.500587224960327s
+[2024-12-12 00:33:12,416] [INFO] [logging.py:96:log_dist] [Rank 0] step=220, skipped=3, lr=[9.614535118541126e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:33:12,431] [INFO] [timer.py:264:stop] epoch=2/micro_step=120/global_step=220, RunningAvgSamplesPerSec=5.664398766590185, CurrSamplesPerSec=5.374979765506029, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 3/10, curr_step:1760/8200 curr_loss 0.736328125 lr:9.614535118541126e-05 use time:14.786232948303223s
+Beginning of Epoch 3/10, curr_step:1770/8200 curr_loss 0.380859375 lr:9.608005656488605e-05 use time:13.712421655654907s
+Beginning of Epoch 3/10, curr_step:1780/8200 curr_loss 0.147216796875 lr:9.601423611305481e-05 use time:14.059540271759033s
+Beginning of Epoch 3/10, curr_step:1790/8200 curr_loss 0.1612548828125 lr:9.594789058101153e-05 use time:13.841856002807617s
+Beginning of Epoch 3/10, curr_step:1800/8200 curr_loss 1.1123046875 lr:9.581362731061536e-05 use time:14.54285454750061s
+Beginning of Epoch 3/10, curr_step:1810/8200 curr_loss 0.62109375 lr:9.574571110437495e-05 use time:14.08303451538086s
+Beginning of Epoch 3/10, curr_step:1820/8200 curr_loss 0.583984375 lr:9.567727288213005e-05 use time:13.808799982070923s
+Beginning of Epoch 3/10, curr_step:1830/8200 curr_loss 0.6533203125 lr:9.560831342484667e-05 use time:14.912624835968018s
+[2024-12-12 00:35:05,321] [INFO] [logging.py:96:log_dist] [Rank 0] step=230, skipped=3, lr=[9.546883395875947e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:35:05,335] [INFO] [timer.py:264:stop] epoch=2/micro_step=200/global_step=230, RunningAvgSamplesPerSec=5.66571723508636, CurrSamplesPerSec=5.742382094062817, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 3/10, curr_step:1840/8200 curr_loss 0.50146484375 lr:9.546883395875947e-05 use time:13.87651801109314s
+Beginning of Epoch 3/10, curr_step:1850/8200 curr_loss 0.465087890625 lr:9.539831554159151e-05 use time:14.798521280288696s
+Beginning of Epoch 3/10, curr_step:1860/8200 curr_loss 0.92236328125 lr:9.532727907263859e-05 use time:14.135876655578613s
+Beginning of Epoch 3/10, curr_step:1870/8200 curr_loss 0.220947265625 lr:9.525572536251607e-05 use time:13.932918071746826s
+Beginning of Epoch 3/10, curr_step:1880/8200 curr_loss 0.1455078125 lr:9.511106949072588e-05 use time:13.722389936447144s
+Beginning of Epoch 3/10, curr_step:1890/8200 curr_loss 0.41943359375 lr:9.503796897976338e-05 use time:14.240964412689209s
+Beginning of Epoch 3/10, curr_step:1900/8200 curr_loss 0.4775390625 lr:9.496435452902267e-05 use time:14.048361778259277s
+Beginning of Epoch 3/10, curr_step:1910/8200 curr_loss 0.297607421875 lr:9.489022697853709e-05 use time:14.335365533828735s
+[2024-12-12 00:36:58,925] [INFO] [logging.py:96:log_dist] [Rank 0] step=240, skipped=3, lr=[9.474043596773048e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:36:58,940] [INFO] [timer.py:264:stop] epoch=2/micro_step=280/global_step=240, RunningAvgSamplesPerSec=5.665403489967745, CurrSamplesPerSec=5.5332161519316525, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 3/10, curr_step:1920/8200 curr_loss 0.908203125 lr:9.474043596773048e-05 use time:14.691284894943237s
+Beginning of Epoch 3/10, curr_step:1930/8200 curr_loss 1.0615234375 lr:9.466477421671296e-05 use time:13.971447944641113s
+Beginning of Epoch 3/10, curr_step:1940/8200 curr_loss 0.09075927734375 lr:9.45886027845381e-05 use time:14.581653356552124s
+Beginning of Epoch 3/10, curr_step:1950/8200 curr_loss 0.492919921875 lr:9.451192254041758e-05 use time:13.997122287750244s
+Beginning of Epoch 3/10, curr_step:1960/8200 curr_loss 0.244140625 lr:9.435703912220726e-05 use time:13.739402055740356s
+Beginning of Epoch 3/10, curr_step:1970/8200 curr_loss 0.92236328125 lr:9.427883771553172e-05 use time:13.980644941329956s
+Beginning of Epoch 3/10, curr_step:1980/8200 curr_loss 0.85693359375 lr:9.420013103171892e-05 use time:14.287343502044678s
+Beginning of Epoch 3/10, curr_step:1990/8200 curr_loss 0.8408203125 lr:9.412091996891096e-05 use time:14.299783706665039s
+[2024-12-12 00:38:52,522] [INFO] [logging.py:96:log_dist] [Rank 0] step=250, skipped=3, lr=[9.396098832764556e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:38:52,537] [INFO] [timer.py:264:stop] epoch=2/micro_step=360/global_step=250, RunningAvgSamplesPerSec=5.665076658306403, CurrSamplesPerSec=5.523985457264621, MemAllocated=10.21GB, MaxMemAllocated=47.24GB
+Beginning of Epoch 3/10, curr_step:2000/8200 curr_loss 0.50146484375 lr:9.396098832764556e-05 use time:14.524451971054077s
+Beginning of Epoch 3/10, curr_step:2010/8200 curr_loss 0.6083984375 lr:9.388026957420895e-05 use time:14.637500762939453s
+Beginning of Epoch 3/10, curr_step:2020/8200 curr_loss 0.49755859375 lr:9.379905009179805e-05 use time:13.848918676376343s
+Beginning of Epoch 3/10, curr_step:2030/8200 curr_loss 0.708984375 lr:9.371733080722911e-05 use time:14.027055978775024s
+Beginning of Epoch 3/10, curr_step:2040/8200 curr_loss 0.206787109375 lr:9.355239656738848e-05 use time:14.390892505645752s
+Beginning of Epoch 3/10, curr_step:2050/8200 curr_loss 0.865234375 lr:9.346918349422355e-05 use time:13.973689317703247s
+Beginning of Epoch 3/10, curr_step:2060/8200 curr_loss 0.63916015625 lr:9.338547438309269e-05 use time:14.097769021987915s
+Beginning of Epoch 3/10, curr_step:2070/8200 curr_loss 0.304931640625 lr:9.330127018922194e-05 use time:14.92038607597351s
+[2024-12-12 00:40:47,046] [INFO] [logging.py:96:log_dist] [Rank 0] step=260, skipped=3, lr=[9.313138040240166e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:40:47,061] [INFO] [timer.py:264:stop] epoch=2/micro_step=440/global_step=260, RunningAvgSamplesPerSec=5.663074851724639, CurrSamplesPerSec=5.550589826767307, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 3/10, curr_step:2080/8200 curr_loss 0.352294921875 lr:9.313138040240166e-05 use time:14.798762083053589s
+Beginning of Epoch 3/10, curr_step:2090/8200 curr_loss 1.1708984375 lr:9.304569674810794e-05 use time:14.439903974533081s
+Beginning of Epoch 3/10, curr_step:2100/8200 curr_loss 0.278564453125 lr:9.295952188836379e-05 use time:13.875935792922974s
+Beginning of Epoch 3/10, curr_step:2110/8200 curr_loss 0.203857421875 lr:9.287285680653254e-05 use time:14.061042308807373s
+Beginning of Epoch 3/10, curr_step:2120/8200 curr_loss 0.47412109375 lr:9.269805993802129e-05 use time:14.332005023956299s
+Beginning of Epoch 3/10, curr_step:2130/8200 curr_loss 0.390625 lr:9.260993014599299e-05 use time:14.06496524810791s
+Beginning of Epoch 3/10, curr_step:2140/8200 curr_loss 0.123779296875 lr:9.252131412115837e-05 use time:14.443587303161621s
+Beginning of Epoch 3/10, curr_step:2150/8200 curr_loss 1.1826171875 lr:9.243221287473756e-05 use time:14.229552984237671s
+[2024-12-12 00:42:40,892] [INFO] [logging.py:96:log_dist] [Rank 0] step=270, skipped=3, lr=[9.225255878969108e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:42:40,906] [INFO] [timer.py:264:stop] epoch=2/micro_step=520/global_step=270, RunningAvgSamplesPerSec=5.66245392838408, CurrSamplesPerSec=5.638430882060747, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 3/10, curr_step:2160/8200 curr_loss 0.332275390625 lr:9.225255878969108e-05 use time:14.066778898239136s
+Beginning of Epoch 3/10, curr_step:2170/8200 curr_loss 0.34716796875 lr:9.216200800114412e-05 use time:14.268702983856201s
+Beginning of Epoch 3/10, curr_step:2180/8200 curr_loss 0.272216796875 lr:9.207097609114494e-05 use time:14.679279565811157s
+Beginning of Epoch 3/10, curr_step:2190/8200 curr_loss 0.172607421875 lr:9.197946409848194e-05 use time:14.05945897102356s
+Beginning of Epoch 3/10, curr_step:2200/8200 curr_loss 0.689453125 lr:9.179500404769792e-05 use time:14.530285596847534s
+Beginning of Epoch 3/10, curr_step:2210/8200 curr_loss 0.2939453125 lr:9.170205809449767e-05 use time:13.849970817565918s
+Beginning of Epoch 3/10, curr_step:2220/8200 curr_loss 0.06378173828125 lr:9.16086362684512e-05 use time:14.339353561401367s
+Beginning of Epoch 3/10, curr_step:2230/8200 curr_loss 0.4873046875 lr:9.151473963561883e-05 use time:14.556507110595703s
+[2024-12-12 00:44:35,273] [INFO] [logging.py:96:log_dist] [Rank 0] step=280, skipped=3, lr=[9.132552624091621e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:44:35,288] [INFO] [timer.py:264:stop] epoch=2/micro_step=600/global_step=280, RunningAvgSamplesPerSec=5.660944510528025, CurrSamplesPerSec=5.60588606515589, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 3/10, curr_step:2240/8200 curr_loss 0.1571044921875 lr:9.132552624091621e-05 use time:14.204211950302124s
+Beginning of Epoch 3/10, curr_step:2250/8200 curr_loss 0.1097412109375 lr:9.123021163820839e-05 use time:13.887376308441162s
+Beginning of Epoch 3/10, curr_step:2260/8200 curr_loss 0.1483154296875 lr:9.113442654701487e-05 use time:14.287125587463379s
+Beginning of Epoch 3/10, curr_step:2270/8200 curr_loss 0.0732421875 lr:9.103817206036382e-05 use time:13.980971336364746s
+Beginning of Epoch 3/10, curr_step:2280/8200 curr_loss 0.340576171875 lr:9.08442592995712e-05 use time:14.539242506027222s
+Beginning of Epoch 3/10, curr_step:2290/8200 curr_loss 0.202392578125 lr:9.074660323821771e-05 use time:13.620229482650757s
+Beginning of Epoch 3/10, curr_step:2300/8200 curr_loss 0.108642578125 lr:9.064848220695761e-05 use time:14.070371627807617s
+Beginning of Epoch 3/10, curr_step:2310/8200 curr_loss 0.053924560546875 lr:9.054989732547506e-05 use time:13.990443229675293s
+[2024-12-12 00:46:28,167] [INFO] [logging.py:96:log_dist] [Rank 0] step=290, skipped=3, lr=[9.03513405170321e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:46:28,182] [INFO] [timer.py:264:stop] epoch=2/micro_step=680/global_step=290, RunningAvgSamplesPerSec=5.662109608543887, CurrSamplesPerSec=5.532688468481146, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 3/10, curr_step:2320/8200 curr_loss 0.09185791015625 lr:9.03513405170321e-05 use time:14.564680099487305s
+Beginning of Epoch 3/10, curr_step:2330/8200 curr_loss 0.17138671875 lr:9.025137085585418e-05 use time:13.979717493057251s
+Beginning of Epoch 3/10, curr_step:2340/8200 curr_loss 0.24169921875 lr:9.015094187599297e-05 use time:14.3511643409729s
+Beginning of Epoch 3/10, curr_step:2350/8200 curr_loss 0.0595703125 lr:9.005005472346924e-05 use time:14.747432231903076s
+Beginning of Epoch 3/10, curr_step:2360/8200 curr_loss 0.1051025390625 lr:8.984691051064575e-05 use time:14.221055507659912s
+Beginning of Epoch 3/10, curr_step:2370/8200 curr_loss 0.147705078125 lr:8.974465576847655e-05 use time:14.037821292877197s
+Beginning of Epoch 3/10, curr_step:2380/8200 curr_loss 0.1351318359375 lr:8.964194748987947e-05 use time:14.172377109527588s
+Beginning of Epoch 3/10, curr_step:2390/8200 curr_loss 0.06353759765625 lr:8.953878684688493e-05 use time:14.23287296295166s
+[2024-12-12 00:48:21,794] [INFO] [logging.py:96:log_dist] [Rank 0] step=300, skipped=3, lr=[8.9331113181622e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:48:21,809] [INFO] [timer.py:264:stop] epoch=2/micro_step=760/global_step=300, RunningAvgSamplesPerSec=5.661942437420608, CurrSamplesPerSec=5.7603572872691124, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 3/10, curr_step:2400/8200 curr_loss 0.396240234375 lr:8.9331113181622e-05 use time:14.075457334518433s
+Beginning of Epoch 3/10, curr_step:2410/8200 curr_loss 0.0867919921875 lr:8.922660252917087e-05 use time:14.488863706588745s
+Beginning of Epoch 3/10, curr_step:2420/8200 curr_loss 0.09771728515625 lr:8.912164425192983e-05 use time:14.521111011505127s
+Beginning of Epoch 3/10, curr_step:2430/8200 curr_loss 0.322021484375 lr:8.90162395476046e-05 use time:14.318347692489624s
+Beginning of Epoch 3/10, curr_step:2440/8200 curr_loss 0.042449951171875 lr:8.880409567398224e-05 use time:14.204862117767334s
+Beginning of Epoch 3/10, curr_step:2450/8200 curr_loss 0.9208984375 lr:8.869735892551311e-05 use time:13.570833921432495s
+saving model ...
+saving success ...
+Beginning of Epoch 4/10, Total Micro Batches 820
+Beginning of Epoch 4/10, curr_step:2460/8200 curr_loss 0.5009765625 lr:8.85901805915881e-05 use time:14.555137157440186s
+[2024-12-12 00:49:53,374] [INFO] [loss_scaler.py:190:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, but hysteresis is 2. Reducing hysteresis to 1
+Beginning of Epoch 4/10, curr_step:2470/8200 curr_loss 0.2861328125 lr:8.85901805915881e-05 use time:13.922189950942993s
+[2024-12-12 00:50:04,309] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, reducing to 65536
+[2024-12-12 00:50:16,015] [INFO] [logging.py:96:log_dist] [Rank 0] step=310, skipped=5, lr=[8.848256189524662e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:50:16,030] [INFO] [timer.py:264:stop] epoch=3/micro_step=20/global_step=310, RunningAvgSamplesPerSec=5.662505569276682, CurrSamplesPerSec=5.489203931579561, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 4/10, curr_step:2480/8200 curr_loss 0.3154296875 lr:8.848256189524662e-05 use time:14.423027038574219s
+Beginning of Epoch 4/10, curr_step:2490/8200 curr_loss 0.65185546875 lr:8.83745040645531e-05 use time:14.563039779663086s
+Beginning of Epoch 4/10, curr_step:2500/8200 curr_loss 0.01154327392578125 lr:8.826600833258308e-05 use time:13.868629932403564s
+Beginning of Epoch 4/10, curr_step:2510/8200 curr_loss 0.08251953125 lr:8.81570759374091e-05 use time:14.468118667602539s
+Beginning of Epoch 4/10, curr_step:2520/8200 curr_loss 0.039520263671875 lr:8.793790613463955e-05 use time:14.553863763809204s
+Beginning of Epoch 4/10, curr_step:2530/8200 curr_loss 0.0274505615234375 lr:8.782767122804665e-05 use time:14.175679206848145s
+Beginning of Epoch 4/10, curr_step:2540/8200 curr_loss 0.0712890625 lr:8.771700466022654e-05 use time:14.152845859527588s
+Beginning of Epoch 4/10, curr_step:2550/8200 curr_loss 0.83740234375 lr:8.760590769402373e-05 use time:14.319257259368896s
+[2024-12-12 00:52:10,166] [INFO] [logging.py:96:log_dist] [Rank 0] step=320, skipped=5, lr=[8.738242764239046e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:52:10,181] [INFO] [timer.py:264:stop] epoch=3/micro_step=100/global_step=320, RunningAvgSamplesPerSec=5.661537071006338, CurrSamplesPerSec=5.709820391384123, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 4/10, curr_step:2560/8200 curr_loss 0.1280517578125 lr:8.738242764239046e-05 use time:14.048427820205688s
+Beginning of Epoch 4/10, curr_step:2570/8200 curr_loss 0.2064208984375 lr:8.727004710714799e-05 use time:13.964179039001465s
+Beginning of Epoch 4/10, curr_step:2580/8200 curr_loss 0.0213470458984375 lr:8.715724127386972e-05 use time:14.141166687011719s
+Beginning of Epoch 4/10, curr_step:2590/8200 curr_loss 0.289306640625 lr:8.704401142981184e-05 use time:13.690107822418213s
+Beginning of Epoch 4/10, curr_step:2600/8200 curr_loss 0.0736083984375 lr:8.681628488255986e-05 use time:13.97443675994873s
+Beginning of Epoch 4/10, curr_step:2610/8200 curr_loss 0.041900634765625 lr:8.67017907780116e-05 use time:13.764521598815918s
+Beginning of Epoch 4/10, curr_step:2620/8200 curr_loss 0.1326904296875 lr:8.658687785994579e-05 use time:14.72154188156128s
+Beginning of Epoch 4/10, curr_step:2630/8200 curr_loss 0.220703125 lr:8.64715474396631e-05 use time:14.283029317855835s
+[2024-12-12 00:54:02,404] [INFO] [logging.py:96:log_dist] [Rank 0] step=330, skipped=5, lr=[8.6239639361456e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:54:02,418] [INFO] [timer.py:264:stop] epoch=3/micro_step=180/global_step=330, RunningAvgSamplesPerSec=5.6635741663970585, CurrSamplesPerSec=5.934526561985875, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 4/10, curr_step:2640/8200 curr_loss 0.30517578125 lr:8.6239639361456e-05 use time:13.92003059387207s
+Beginning of Epoch 4/10, curr_step:2650/8200 curr_loss 0.111328125 lr:8.612306434989395e-05 use time:14.735967874526978s
+Beginning of Epoch 4/10, curr_step:2660/8200 curr_loss 0.125244140625 lr:8.600607712880955e-05 use time:14.112897872924805s
+Beginning of Epoch 4/10, curr_step:2670/8200 curr_loss 0.037322998046875 lr:8.588867903317394e-05 use time:14.632546186447144s
+Beginning of Epoch 4/10, curr_step:2680/8200 curr_loss 0.042999267578125 lr:8.565265558156101e-05 use time:14.270276069641113s
+Beginning of Epoch 4/10, curr_step:2690/8200 curr_loss 0.13623046875 lr:8.553403291890767e-05 use time:13.622906923294067s
+Beginning of Epoch 4/10, curr_step:2700/8200 curr_loss 0.12548828125 lr:8.541500476832025e-05 use time:13.76253080368042s
+Beginning of Epoch 4/10, curr_step:2710/8200 curr_loss 0.69091796875 lr:8.529557248805939e-05 use time:14.13472580909729s
+[2024-12-12 00:55:56,182] [INFO] [logging.py:96:log_dist] [Rank 0] step=340, skipped=5, lr=[8.505550099460265e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:55:56,197] [INFO] [timer.py:264:stop] epoch=3/micro_step=260/global_step=340, RunningAvgSamplesPerSec=5.66319287765912, CurrSamplesPerSec=5.599308441409777, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 4/10, curr_step:2720/8200 curr_loss 0.11480712890625 lr:8.505550099460265e-05 use time:14.156846523284912s
+Beginning of Epoch 4/10, curr_step:2730/8200 curr_loss 0.55517578125 lr:8.493486452092392e-05 use time:13.522325992584229s
+Beginning of Epoch 4/10, curr_step:2740/8200 curr_loss 0.08758544921875 lr:8.48138293965749e-05 use time:14.604355096817017s
+Beginning of Epoch 4/10, curr_step:2750/8200 curr_loss 0.406982421875 lr:8.469239700271829e-05 use time:13.98494005203247s
+Beginning of Epoch 4/10, curr_step:2760/8200 curr_loss 0.1856689453125 lr:8.444834595378434e-05 use time:14.262737274169922s
+Beginning of Epoch 4/10, curr_step:2770/8200 curr_loss 0.0882568359375 lr:8.432573008363587e-05 use time:14.274999856948853s
+Beginning of Epoch 4/10, curr_step:2780/8200 curr_loss 0.53076171875 lr:8.420272251380588e-05 use time:14.123335838317871s
+Beginning of Epoch 4/10, curr_step:2790/8200 curr_loss 0.0083770751953125 lr:8.407932464796521e-05 use time:13.951494455337524s
+[2024-12-12 00:57:48,999] [INFO] [logging.py:96:log_dist] [Rank 0] step=350, skipped=5, lr=[8.383136366518788e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:57:49,014] [INFO] [timer.py:264:stop] epoch=3/micro_step=340/global_step=350, RunningAvgSamplesPerSec=5.664137710793339, CurrSamplesPerSec=5.618932878010489, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 4/10, curr_step:2800/8200 curr_loss 0.344970703125 lr:8.383136366518788e-05 use time:14.1895010471344s
+Beginning of Epoch 4/10, curr_step:2810/8200 curr_loss 0.03448486328125 lr:8.370680337779737e-05 use time:14.458069562911987s
+Beginning of Epoch 4/10, curr_step:2820/8200 curr_loss 0.337890625 lr:8.358185845345623e-05 use time:14.249987363815308s
+Beginning of Epoch 4/10, curr_step:2830/8200 curr_loss 0.105712890625 lr:8.345653031794292e-05 use time:14.575189113616943s
+Beginning of Epoch 4/10, curr_step:2840/8200 curr_loss 0.323974609375 lr:8.320473013836196e-05 use time:14.033938884735107s
+Beginning of Epoch 4/10, curr_step:2850/8200 curr_loss 0.54736328125 lr:8.307826096765053e-05 use time:13.74231243133545s
+Beginning of Epoch 4/10, curr_step:2860/8200 curr_loss 0.0007271766662597656 lr:8.295141433244659e-05 use time:14.478762865066528s
+Beginning of Epoch 4/10, curr_step:2870/8200 curr_loss 0.12469482421875 lr:8.282419168022953e-05 use time:14.301440000534058s
+[2024-12-12 00:59:43,076] [INFO] [logging.py:96:log_dist] [Rank 0] step=360, skipped=5, lr=[8.256862413611113e-05], mom=[(0.9, 0.95)]
+[2024-12-12 00:59:43,091] [INFO] [timer.py:264:stop] epoch=3/micro_step=420/global_step=360, RunningAvgSamplesPerSec=5.663345299579971, CurrSamplesPerSec=5.632868434171223, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 4/10, curr_step:2880/8200 curr_loss 0.11468505859375 lr:8.256862413611113e-05 use time:14.358690738677979s
+Beginning of Epoch 4/10, curr_step:2890/8200 curr_loss 0.00858306884765625 lr:8.244028216055634e-05 use time:14.790834188461304s
+Beginning of Epoch 4/10, curr_step:2900/8200 curr_loss 0.10089111328125 lr:8.231157000064833e-05 use time:13.607708930969238s
+Beginning of Epoch 4/10, curr_step:2910/8200 curr_loss 0.15576171875 lr:8.218248912515442e-05 use time:14.335357427597046s
+Beginning of Epoch 4/10, curr_step:2920/8200 curr_loss 0.33740234375 lr:8.192322712349917e-05 use time:14.116920471191406s
+Beginning of Epoch 4/10, curr_step:2930/8200 curr_loss 0.302001953125 lr:8.17930489558428e-05 use time:13.977673292160034s
+Beginning of Epoch 4/10, curr_step:2940/8200 curr_loss 0.74072265625 lr:8.166250798957676e-05 use time:14.1237952709198s
+Beginning of Epoch 4/10, curr_step:2950/8200 curr_loss 0.1328125 lr:8.153160571433737e-05 use time:14.525219917297363s
+[2024-12-12 01:01:36,808] [INFO] [logging.py:96:log_dist] [Rank 0] step=370, skipped=5, lr=[8.126872321608184e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:01:36,824] [INFO] [timer.py:264:stop] epoch=3/micro_step=500/global_step=370, RunningAvgSamplesPerSec=5.663048652558274, CurrSamplesPerSec=5.6633626428406885, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 4/10, curr_step:2960/8200 curr_loss 0.2069091796875 lr:8.126872321608184e-05 use time:14.282918214797974s
+Beginning of Epoch 4/10, curr_step:2970/8200 curr_loss 0.521484375 lr:8.11367459928851e-05 use time:14.605174779891968s
+Beginning of Epoch 4/10, curr_step:2980/8200 curr_loss 0.1746826171875 lr:8.100441346031958e-05 use time:14.04715871810913s
+Beginning of Epoch 4/10, curr_step:2990/8200 curr_loss 0.1326904296875 lr:8.087172712846565e-05 use time:14.135482549667358s
+Beginning of Epoch 4/10, curr_step:3000/8200 curr_loss 0.0199432373046875 lr:8.060529912738315e-05 use time:14.934280157089233s
+Beginning of Epoch 4/10, curr_step:3010/8200 curr_loss 0.0360107421875 lr:8.047156049843263e-05 use time:14.390938997268677s
+Beginning of Epoch 4/10, curr_step:3020/8200 curr_loss 0.26220703125 lr:8.033747415071507e-05 use time:13.973532438278198s
+Beginning of Epoch 4/10, curr_step:3030/8200 curr_loss 0.01140594482421875 lr:8.020304161432404e-05 use time:13.737525701522827s
+[2024-12-12 01:03:30,549] [INFO] [logging.py:96:log_dist] [Rank 0] step=380, skipped=5, lr=[7.993314411563075e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:03:30,564] [INFO] [timer.py:264:stop] epoch=3/micro_step=580/global_step=380, RunningAvgSamplesPerSec=5.6627370053891095, CurrSamplesPerSec=5.775469773761722, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 4/10, curr_step:3040/8200 curr_loss 0.0143890380859375 lr:7.993314411563075e-05 use time:13.861968994140625s
+Beginning of Epoch 4/10, curr_step:3050/8200 curr_loss 0.10040283203125 lr:7.979768223319785e-05 use time:14.44916296005249s
+Beginning of Epoch 4/10, curr_step:3060/8200 curr_loss 0.13525390625 lr:7.966188032179507e-05 use time:14.307349920272827s
+Beginning of Epoch 4/10, curr_step:3070/8200 curr_loss 0.030609130859375 lr:7.952573993109274e-05 use time:14.009503602981567s
+Beginning of Epoch 4/10, curr_step:3080/8200 curr_loss 0.1529541015625 lr:7.925244992976538e-05 use time:14.372509241104126s
+Beginning of Epoch 4/10, curr_step:3090/8200 curr_loss 0.2353515625 lr:7.911530343772245e-05 use time:14.144644498825073s
+Beginning of Epoch 4/10, curr_step:3100/8200 curr_loss 0.9775390625 lr:7.89778247035085e-05 use time:14.407754898071289s
+Beginning of Epoch 4/10, curr_step:3110/8200 curr_loss 0.1209716796875 lr:7.884001529592854e-05 use time:13.769550323486328s
+[2024-12-12 01:05:23,788] [INFO] [logging.py:96:log_dist] [Rank 0] step=390, skipped=5, lr=[7.856341075473962e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:05:23,803] [INFO] [timer.py:264:stop] epoch=3/micro_step=660/global_step=390, RunningAvgSamplesPerSec=5.663121833383167, CurrSamplesPerSec=5.848887176414498, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 4/10, curr_step:3120/8200 curr_loss 0.03955078125 lr:7.856341075473962e-05 use time:13.791666030883789s
+Beginning of Epoch 4/10, curr_step:3130/8200 curr_loss 0.344482421875 lr:7.842461877753575e-05 use time:14.003921747207642s
+Beginning of Epoch 4/10, curr_step:3140/8200 curr_loss 0.1788330078125 lr:7.828550243974015e-05 use time:14.160194635391235s
+Beginning of Epoch 4/10, curr_step:3150/8200 curr_loss 0.0357666015625 lr:7.814606332884489e-05 use time:13.63656759262085s
+Beginning of Epoch 4/10, curr_step:3160/8200 curr_loss 0.31591796875 lr:7.786622315612183e-05 use time:14.101706266403198s
+Beginning of Epoch 4/10, curr_step:3170/8200 curr_loss 0.01032257080078125 lr:7.772582528762179e-05 use time:14.7571542263031s
+Beginning of Epoch 4/10, curr_step:3180/8200 curr_loss 0.351806640625 lr:7.758511103264117e-05 use time:14.36182165145874s
+Beginning of Epoch 4/10, curr_step:3190/8200 curr_loss 0.08306884765625 lr:7.744408199690627e-05 use time:14.238072156906128s
+[2024-12-12 01:07:17,165] [INFO] [logging.py:96:log_dist] [Rank 0] step=400, skipped=5, lr=[7.716108602402094e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:07:17,180] [INFO] [timer.py:264:stop] epoch=3/micro_step=740/global_step=400, RunningAvgSamplesPerSec=5.663299627068532, CurrSamplesPerSec=5.693770196266752, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 4/10, curr_step:3200/8200 curr_loss 0.371826171875 lr:7.716108602402094e-05 use time:14.131243228912354s
+Beginning of Epoch 4/10, curr_step:3210/8200 curr_loss 0.38330078125 lr:7.70191223162099e-05 use time:14.365788221359253s
+Beginning of Epoch 4/10, curr_step:3220/8200 curr_loss 0.2529296875 lr:7.687685028628653e-05 use time:14.222697019577026s
+Beginning of Epoch 4/10, curr_step:3230/8200 curr_loss 0.53857421875 lr:7.673427155775336e-05 use time:14.576975584030151s
+Beginning of Epoch 4/10, curr_step:3240/8200 curr_loss 0.0025234222412109375 lr:7.644820051634812e-05 use time:14.39647912979126s
+Beginning of Epoch 4/10, curr_step:3250/8200 curr_loss 0.037933349609375 lr:7.630471146790585e-05 use time:14.449082851409912s
+Beginning of Epoch 4/10, curr_step:3260/8200 curr_loss 0.0836181640625 lr:7.61609222496761e-05 use time:14.46323823928833s
+Beginning of Epoch 4/10, curr_step:3270/8200 curr_loss 0.408203125 lr:7.60168345024744e-05 use time:13.795151948928833s
+[2024-12-12 01:09:11,312] [INFO] [loss_scaler.py:190:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, but hysteresis is 2. Reducing hysteresis to 1
+[2024-12-12 01:09:11,313] [INFO] [logging.py:96:log_dist] [Rank 0] step=410, skipped=6, lr=[7.587244987052287e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:09:11,313] [INFO] [timer.py:264:stop] epoch=3/micro_step=820/global_step=410, RunningAvgSamplesPerSec=5.662508397341318, CurrSamplesPerSec=5.813469890331585, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+saving model ...
+saving success ...
+Beginning of Epoch 5/10, Total Micro Batches 820
+Beginning of Epoch 5/10, curr_step:3280/8200 curr_loss 0.395751953125 lr:7.587244987052287e-05 use time:14.656140565872192s
+[2024-12-12 01:09:23,020] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, reducing to 65536
+Beginning of Epoch 5/10, curr_step:3290/8200 curr_loss 0.1546630859375 lr:7.587244987052287e-05 use time:13.576871156692505s
+Beginning of Epoch 5/10, curr_step:3300/8200 curr_loss 0.36328125 lr:7.572777000143145e-05 use time:14.6290762424469s
+Beginning of Epoch 5/10, curr_step:3310/8200 curr_loss 0.027099609375 lr:7.558279654617912e-05 use time:14.35267448425293s
+Beginning of Epoch 5/10, curr_step:3320/8200 curr_loss 0.16162109375 lr:7.529197549783967e-05 use time:13.84131407737732s
+Beginning of Epoch 5/10, curr_step:3330/8200 curr_loss 0.20556640625 lr:7.514613122338589e-05 use time:14.590475082397461s
+Beginning of Epoch 5/10, curr_step:3340/8200 curr_loss 0.1405029296875 lr:7.500000000000001e-05 use time:14.231037855148315s
+Beginning of Epoch 5/10, curr_step:3350/8200 curr_loss 0.04425048828125 lr:7.485358349522274e-05 use time:14.084514379501343s
+[2024-12-12 01:11:05,589] [INFO] [logging.py:96:log_dist] [Rank 0] step=420, skipped=7, lr=[7.455990132791517e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:11:05,604] [INFO] [timer.py:264:stop] epoch=4/micro_step=80/global_step=420, RunningAvgSamplesPerSec=5.6626259550278695, CurrSamplesPerSec=5.681895038821651, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 5/10, curr_step:3360/8200 curr_loss 0.2000732421875 lr:7.455990132791517e-05 use time:14.082505702972412s
+Beginning of Epoch 5/10, curr_step:3370/8200 curr_loss 0.0038604736328125 lr:7.44126390166671e-05 use time:14.305715799331665s
+Beginning of Epoch 5/10, curr_step:3380/8200 curr_loss 0.5205078125 lr:7.426509812655406e-05 use time:14.397743225097656s
+Beginning of Epoch 5/10, curr_step:3390/8200 curr_loss 0.0193328857421875 lr:7.411728034120279e-05 use time:14.158309698104858s
+Beginning of Epoch 5/10, curr_step:3400/8200 curr_loss 0.0440673828125 lr:7.382082083507226e-05 use time:14.309810638427734s
+Beginning of Epoch 5/10, curr_step:3410/8200 curr_loss 0.004329681396484375 lr:7.36721824972682e-05 use time:13.867607355117798s
+Beginning of Epoch 5/10, curr_step:3420/8200 curr_loss 0.0158233642578125 lr:7.35232740301378e-05 use time:13.799548625946045s
+Beginning of Epoch 5/10, curr_step:3430/8200 curr_loss 0.61962890625 lr:7.337409713291356e-05 use time:13.862803936004639s
+[2024-12-12 01:12:58,568] [INFO] [logging.py:96:log_dist] [Rank 0] step=430, skipped=7, lr=[7.30749448604103e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:12:58,583] [INFO] [timer.py:264:stop] epoch=4/micro_step=160/global_step=430, RunningAvgSamplesPerSec=5.663253470617139, CurrSamplesPerSec=5.592728756840405, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 5/10, curr_step:3440/8200 curr_loss 0.1639404296875 lr:7.30749448604103e-05 use time:14.682607173919678s
+Beginning of Epoch 5/10, curr_step:3450/8200 curr_loss 0.1173095703125 lr:7.292497289883433e-05 use time:14.15647006034851s
+Beginning of Epoch 5/10, curr_step:3460/8200 curr_loss 0.100830078125 lr:7.27747393345317e-05 use time:14.00155758857727s
+Beginning of Epoch 5/10, curr_step:3470/8200 curr_loss 0.0819091796875 lr:7.26242458818561e-05 use time:14.802218675613403s
+Beginning of Epoch 5/10, curr_step:3480/8200 curr_loss 0.263916015625 lr:7.232248618360889e-05 use time:14.107032537460327s
+Beginning of Epoch 5/10, curr_step:3490/8200 curr_loss 0.07476806640625 lr:7.21712233814944e-05 use time:14.506527662277222s
+Beginning of Epoch 5/10, curr_step:3500/8200 curr_loss 0.0162506103515625 lr:7.201970757788172e-05 use time:14.231569290161133s
+Beginning of Epoch 5/10, curr_step:3510/8200 curr_loss 0.053558349609375 lr:7.186794050175643e-05 use time:13.809013843536377s
+[2024-12-12 01:14:52,506] [INFO] [logging.py:96:log_dist] [Rank 0] step=440, skipped=7, lr=[7.156365946222721e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:14:52,520] [INFO] [timer.py:264:stop] epoch=4/micro_step=240/global_step=440, RunningAvgSamplesPerSec=5.6627773797184915, CurrSamplesPerSec=5.8340975056770406, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 5/10, curr_step:3520/8200 curr_loss 0.0509033203125 lr:7.156365946222721e-05 use time:13.932130575180054s
+Beginning of Epoch 5/10, curr_step:3530/8200 curr_loss 0.2010498046875 lr:7.141114897105202e-05 use time:13.785754203796387s
+Beginning of Epoch 5/10, curr_step:3540/8200 curr_loss 0.053741455078125 lr:7.125839415178204e-05 use time:14.063560724258423s
+Beginning of Epoch 5/10, curr_step:3550/8200 curr_loss 0.0675048828125 lr:7.11053967475416e-05 use time:13.778183460235596s
+Beginning of Epoch 5/10, curr_step:3560/8200 curr_loss 0.08673095703125 lr:7.079868117046755e-05 use time:14.486039638519287s
+Beginning of Epoch 5/10, curr_step:3570/8200 curr_loss 0.3291015625 lr:7.064496649764381e-05 use time:13.943644285202026s
+Beginning of Epoch 5/10, curr_step:3580/8200 curr_loss 0.0036067962646484375 lr:7.049101623982937e-05 use time:14.466456651687622s
+Beginning of Epoch 5/10, curr_step:3590/8200 curr_loss 0.457763671875 lr:7.033683215379002e-05 use time:13.966568946838379s
+[2024-12-12 01:16:44,852] [INFO] [logging.py:96:log_dist] [Rank 0] step=450, skipped=7, lr=[7.002776953742078e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:16:44,867] [INFO] [timer.py:264:stop] epoch=4/micro_step=320/global_step=450, RunningAvgSamplesPerSec=5.664071812260013, CurrSamplesPerSec=5.730066089132625, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 5/10, curr_step:3600/8200 curr_loss 0.27294921875 lr:7.002776953742078e-05 use time:13.752671718597412s
+Beginning of Epoch 5/10, curr_step:3610/8200 curr_loss 0.3046875 lr:6.987289453388342e-05 use time:13.804339408874512s
+Beginning of Epoch 5/10, curr_step:3620/8200 curr_loss 0.6376953125 lr:6.971779275566593e-05 use time:13.93770694732666s
+Beginning of Epoch 5/10, curr_step:3630/8200 curr_loss 0.38623046875 lr:6.956246597267437e-05 use time:14.316616296768188s
+Beginning of Epoch 5/10, curr_step:3640/8200 curr_loss 0.08575439453125 lr:6.92511444848109e-05 use time:14.425053834915161s
+Beginning of Epoch 5/10, curr_step:3650/8200 curr_loss 0.04730224609375 lr:6.909515333250808e-05 use time:14.798973798751831s
+Beginning of Epoch 5/10, curr_step:3660/8200 curr_loss 0.187255859375 lr:6.89389442805288e-05 use time:13.919285297393799s
+Beginning of Epoch 5/10, curr_step:3670/8200 curr_loss 0.026519775390625 lr:6.87825191114145e-05 use time:13.969824314117432s
+[2024-12-12 01:18:37,882] [INFO] [logging.py:96:log_dist] [Rank 0] step=460, skipped=7, lr=[6.84690275642571e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:18:37,897] [INFO] [timer.py:264:stop] epoch=4/micro_step=400/global_step=460, RunningAvgSamplesPerSec=5.664582462644019, CurrSamplesPerSec=5.7114151383414855, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 5/10, curr_step:3680/8200 curr_loss 0.0032215118408203125 lr:6.84690275642571e-05 use time:14.22300934791565s
+Beginning of Epoch 5/10, curr_step:3690/8200 curr_loss 0.9453125 lr:6.831196476354614e-05 use time:14.04007601737976s
+Beginning of Epoch 5/10, curr_step:3700/8200 curr_loss 0.0037326812744140625 lr:6.815469300032374e-05 use time:13.989971399307251s
+Beginning of Epoch 5/10, curr_step:3710/8200 curr_loss 0.198974609375 lr:6.799721406925816e-05 use time:14.667054176330566s
+Beginning of Epoch 5/10, curr_step:3720/8200 curr_loss 0.00922393798828125 lr:6.768164189407047e-05 use time:14.577113389968872s
+Beginning of Epoch 5/10, curr_step:3730/8200 curr_loss 0.1409912109375 lr:6.75235522510231e-05 use time:14.511240005493164s
+Beginning of Epoch 5/10, curr_step:3740/8200 curr_loss 0.1728515625 lr:6.736526264224101e-05 use time:13.986729145050049s
+Beginning of Epoch 5/10, curr_step:3750/8200 curr_loss 0.1448974609375 lr:6.720677487400741e-05 use time:13.89078950881958s
+[2024-12-12 01:20:31,909] [INFO] [logging.py:96:log_dist] [Rank 0] step=470, skipped=7, lr=[6.688921209560404e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:20:31,924] [INFO] [timer.py:264:stop] epoch=4/micro_step=480/global_step=470, RunningAvgSamplesPerSec=5.663987806923119, CurrSamplesPerSec=5.722849924503693, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 5/10, curr_step:3760/8200 curr_loss 0.298583984375 lr:6.688921209560404e-05 use time:14.004565954208374s
+Beginning of Epoch 5/10, curr_step:3770/8200 curr_loss 0.6787109375 lr:6.67301407092243e-05 use time:13.836215257644653s
+Beginning of Epoch 5/10, curr_step:3780/8200 curr_loss 0.00814056396484375 lr:6.65708784109318e-05 use time:13.964064359664917s
+Beginning of Epoch 5/10, curr_step:3790/8200 curr_loss 0.318115234375 lr:6.641142701810932e-05 use time:14.550692081451416s
+Beginning of Epoch 5/10, curr_step:3800/8200 curr_loss 0.261962890625 lr:6.609196422917394e-05 use time:14.043516874313354s
+Beginning of Epoch 5/10, curr_step:3810/8200 curr_loss 0.10113525390625 lr:6.593195647853258e-05 use time:13.520071744918823s
+Beginning of Epoch 5/10, curr_step:3820/8200 curr_loss 0.10028076171875 lr:6.577176692426279e-05 use time:14.179149866104126s
+Beginning of Epoch 5/10, curr_step:3830/8200 curr_loss 0.020538330078125 lr:6.561139739432847e-05 use time:14.088491916656494s
+[2024-12-12 01:22:23,600] [INFO] [logging.py:96:log_dist] [Rank 0] step=480, skipped=7, lr=[6.529012572957006e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:22:23,614] [INFO] [timer.py:264:stop] epoch=4/micro_step=560/global_step=480, RunningAvgSamplesPerSec=5.665887205612134, CurrSamplesPerSec=5.878207943481022, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 5/10, curr_step:3840/8200 curr_loss 0.01235198974609375 lr:6.529012572957006e-05 use time:13.884157419204712s
+Beginning of Epoch 5/10, curr_step:3850/8200 curr_loss 0.0234375 lr:6.512922726085904e-05 use time:13.681886434555054s
+Beginning of Epoch 5/10, curr_step:3860/8200 curr_loss 0.2198486328125 lr:6.496815614866791e-05 use time:14.161113262176514s
+Beginning of Epoch 5/10, curr_step:3870/8200 curr_loss 0.0266876220703125 lr:6.480691423102028e-05 use time:14.182284593582153s
+Beginning of Epoch 5/10, curr_step:3880/8200 curr_loss 0.06793212890625 lr:6.448392534117463e-05 use time:14.672186374664307s
+Beginning of Epoch 5/10, curr_step:3890/8200 curr_loss 0.1873779296875 lr:6.432218205468539e-05 use time:13.960018157958984s
+Beginning of Epoch 5/10, curr_step:3900/8200 curr_loss 0.109375 lr:6.416027533411519e-05 use time:14.66599416732788s
+Beginning of Epoch 5/10, curr_step:3910/8200 curr_loss 0.55615234375 lr:6.399820702702305e-05 use time:13.912984371185303s
+[2024-12-12 01:24:17,662] [INFO] [logging.py:96:log_dist] [Rank 0] step=490, skipped=7, lr=[6.367359305270713e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:24:17,676] [INFO] [timer.py:264:stop] epoch=4/micro_step=640/global_step=490, RunningAvgSamplesPerSec=5.665311497057697, CurrSamplesPerSec=5.439046411938912, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 5/10, curr_step:3920/8200 curr_loss 0.274169921875 lr:6.367359305270713e-05 use time:14.589093923568726s
+Beginning of Epoch 5/10, curr_step:3930/8200 curr_loss 0.0833740234375 lr:6.351105108973644e-05 use time:13.744074583053589s
+Beginning of Epoch 5/10, curr_step:3940/8200 curr_loss 0.2071533203125 lr:6.334835494870758e-05 use time:14.205505132675171s
+Beginning of Epoch 5/10, curr_step:3950/8200 curr_loss 0.41015625 lr:6.318550648618786e-05 use time:14.177448511123657s
+Beginning of Epoch 5/10, curr_step:3960/8200 curr_loss 0.030364990234375 lr:6.285936003161444e-05 use time:14.127399444580078s
+Beginning of Epoch 5/10, curr_step:3970/8200 curr_loss 0.3984375 lr:6.269606576130135e-05 use time:13.483465671539307s
+Beginning of Epoch 5/10, curr_step:3980/8200 curr_loss 0.05810546875 lr:6.253262661293604e-05 use time:14.498003721237183s
+Beginning of Epoch 5/10, curr_step:3990/8200 curr_loss 0.016998291015625 lr:6.236904445156442e-05 use time:14.757763624191284s
+[2024-12-12 01:26:10,746] [INFO] [logging.py:96:log_dist] [Rank 0] step=500, skipped=7, lr=[6.204145855812439e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:26:10,761] [INFO] [timer.py:264:stop] epoch=4/micro_step=720/global_step=500, RunningAvgSamplesPerSec=5.66568053631452, CurrSamplesPerSec=5.7911903309980755, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 5/10, curr_step:4000/8200 curr_loss 1.123046875 lr:6.204145855812439e-05 use time:14.187201023101807s
+Beginning of Epoch 5/10, curr_step:4010/8200 curr_loss 0.00485992431640625 lr:6.187745856422235e-05 use time:13.915322303771973s
+Beginning of Epoch 5/10, curr_step:4020/8200 curr_loss 0.15283203125 lr:6.171332303360411e-05 use time:14.083922624588013s
+Beginning of Epoch 5/10, curr_step:4030/8200 curr_loss 0.1026611328125 lr:6.154905383926217e-05 use time:14.28172779083252s
+Beginning of Epoch 5/10, curr_step:4040/8200 curr_loss 0.439453125 lr:6.122012195898215e-05 use time:13.865221500396729s
+Beginning of Epoch 5/10, curr_step:4050/8200 curr_loss 0.87353515625 lr:6.105546302656986e-05 use time:14.382553815841675s
+Beginning of Epoch 5/10, curr_step:4060/8200 curr_loss 0.0321044921875 lr:6.0890677937442574e-05 use time:14.333477258682251s
+Beginning of Epoch 5/10, curr_step:4070/8200 curr_loss 0.00864410400390625 lr:6.0725768572005117e-05 use time:13.820204019546509s
+[2024-12-12 01:28:03,701] [INFO] [logging.py:96:log_dist] [Rank 0] step=510, skipped=7, lr=[6.0395584540887963e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:28:03,715] [INFO] [timer.py:264:stop] epoch=4/micro_step=800/global_step=510, RunningAvgSamplesPerSec=5.666194998019455, CurrSamplesPerSec=5.782088282000717, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 5/10, curr_step:4080/8200 curr_loss 0.1822509765625 lr:6.0395584540887963e-05 use time:14.172587156295776s
+Beginning of Epoch 5/10, curr_step:4090/8200 curr_loss 0.130615234375 lr:6.02303136430227e-05 use time:13.582250118255615s
+[2024-12-12 01:28:25,739] [INFO] [loss_scaler.py:190:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, but hysteresis is 2. Reducing hysteresis to 1
+saving model ...
+saving success ...
+Beginning of Epoch 6/10, Total Micro Batches 820
+Beginning of Epoch 6/10, curr_step:4100/8200 curr_loss 0.138671875 lr:6.02303136430227e-05 use time:14.539093971252441s
+[2024-12-12 01:28:37,303] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, reducing to 65536
+Beginning of Epoch 6/10, curr_step:4110/8200 curr_loss 0.1339111328125 lr:6.02303136430227e-05 use time:13.430278062820435s
+Beginning of Epoch 6/10, curr_step:4120/8200 curr_loss 0.1307373046875 lr:5.9899423512399545e-05 use time:14.623897790908813s
+Beginning of Epoch 6/10, curr_step:4130/8200 curr_loss 0.009521484375 lr:5.973380805551354e-05 use time:14.217488050460815s
+Beginning of Epoch 6/10, curr_step:4140/8200 curr_loss 0.1483154296875 lr:5.9568081523655315e-05 use time:14.050221920013428s
+Beginning of Epoch 6/10, curr_step:4150/8200 curr_loss 0.1297607421875 lr:5.940224580797272e-05 use time:14.235361099243164s
+[2024-12-12 01:29:56,426] [INFO] [logging.py:96:log_dist] [Rank 0] step=520, skipped=9, lr=[5.9070254395933656e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:29:56,440] [INFO] [timer.py:264:stop] epoch=5/micro_step=60/global_step=520, RunningAvgSamplesPerSec=5.66773168462542, CurrSamplesPerSec=5.750840486212375, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 6/10, curr_step:4160/8200 curr_loss 0.03631591796875 lr:5.9070254395933656e-05 use time:14.194800615310669s
+Beginning of Epoch 6/10, curr_step:4170/8200 curr_loss 0.0020351409912109375 lr:5.890410248801608e-05 use time:13.772361993789673s
+Beginning of Epoch 6/10, curr_step:4180/8200 curr_loss 0.301513671875 lr:5.8737848973108634e-05 use time:14.41295838356018s
+Beginning of Epoch 6/10, curr_step:4190/8200 curr_loss 0.0177001953125 lr:5.8571495748372684e-05 use time:14.46288776397705s
+Beginning of Epoch 6/10, curr_step:4200/8200 curr_loss 0.149658203125 lr:5.823849776372814e-05 use time:14.245659112930298s
+Beginning of Epoch 6/10, curr_step:4210/8200 curr_loss 0.84521484375 lr:5.807185680374467e-05 use time:13.788597822189331s
+Beginning of Epoch 6/10, curr_step:4220/8200 curr_loss 0.0019178390502929688 lr:5.790512373373962e-05 use time:14.183247566223145s
+Beginning of Epoch 6/10, curr_step:4230/8200 curr_loss 0.08245849609375 lr:5.773830045634664e-05 use time:13.940572023391724s
+[2024-12-12 01:31:49,126] [INFO] [logging.py:96:log_dist] [Rank 0] step=530, skipped=9, lr=[5.740439089505691e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:31:49,141] [INFO] [timer.py:264:stop] epoch=5/micro_step=140/global_step=530, RunningAvgSamplesPerSec=5.668399028412219, CurrSamplesPerSec=5.8773090922270885, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 6/10, curr_step:4240/8200 curr_loss 1.0107421875 lr:5.740439089505691e-05 use time:13.858558177947998s
+Beginning of Epoch 6/10, curr_step:4250/8200 curr_loss 0.005710601806640625 lr:5.723730842148752e-05 use time:14.116869688034058s
+Beginning of Epoch 6/10, curr_step:4260/8200 curr_loss 0.0191650390625 lr:5.707014336114147e-05 use time:14.419938087463379s
+Beginning of Epoch 6/10, curr_step:4270/8200 curr_loss 0.131591796875 lr:5.690289762158203e-05 use time:14.021007061004639s
+Beginning of Epoch 6/10, curr_step:4280/8200 curr_loss 0.0360107421875 lr:5.656817173965733e-05 use time:14.124697923660278s
+Beginning of Epoch 6/10, curr_step:4290/8200 curr_loss 0.025390625 lr:5.64006954169347e-05 use time:14.745711326599121s
+Beginning of Epoch 6/10, curr_step:4300/8200 curr_loss 0.12103271484375 lr:5.6233146054240305e-05 use time:14.088780641555786s
+Beginning of Epoch 6/10, curr_step:4310/8200 curr_loss 0.08984375 lr:5.606552556352275e-05 use time:14.67104458808899s
+[2024-12-12 01:33:43,650] [INFO] [logging.py:96:log_dist] [Rank 0] step=540, skipped=9, lr=[5.5730078849849085e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:33:43,665] [INFO] [timer.py:264:stop] epoch=5/micro_step=220/global_step=540, RunningAvgSamplesPerSec=5.66734261755227, CurrSamplesPerSec=5.6215610685961055, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 6/10, curr_step:4320/8200 curr_loss 0.08892822265625 lr:5.5730078849849085e-05 use time:14.280999183654785s
+Beginning of Epoch 6/10, curr_step:4330/8200 curr_loss 0.0849609375 lr:5.556225645476118e-05 use time:13.825258255004883s
+Beginning of Epoch 6/10, curr_step:4340/8200 curr_loss 0.0263519287109375 lr:5.539437058734287e-05 use time:13.732808113098145s
+Beginning of Epoch 6/10, curr_step:4350/8200 curr_loss 0.24853515625 lr:5.522642316338268e-05 use time:13.90294361114502s
+Beginning of Epoch 6/10, curr_step:4360/8200 curr_loss 0.0090789794921875 lr:5.489035131248123e-05 use time:14.27353048324585s
+Beginning of Epoch 6/10, curr_step:4370/8200 curr_loss 0.1505126953125 lr:5.472223072054178e-05 use time:13.96185827255249s
+Beginning of Epoch 6/10, curr_step:4380/8200 curr_loss 0.07177734375 lr:5.4554056242020325e-05 use time:14.960253477096558s
+Beginning of Epoch 6/10, curr_step:4390/8200 curr_loss 0.02215576171875 lr:5.438582979599881e-05 use time:14.271893978118896s
+[2024-12-12 01:35:37,146] [INFO] [logging.py:96:log_dist] [Rank 0] step=550, skipped=9, lr=[5.404922868072673e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:35:37,161] [INFO] [timer.py:264:stop] epoch=5/micro_step=300/global_step=550, RunningAvgSamplesPerSec=5.667300844619142, CurrSamplesPerSec=5.498988832474158, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 6/10, curr_step:4400/8200 curr_loss 0.00127410888671875 lr:5.404922868072673e-05 use time:14.508605718612671s
+Beginning of Epoch 6/10, curr_step:4410/8200 curr_loss 0.1024169921875 lr:5.3880857852517496e-05 use time:13.974012613296509s
+Beginning of Epoch 6/10, curr_step:4420/8200 curr_loss 0.020751953125 lr:5.371244273884718e-05 use time:14.370637893676758s
+Beginning of Epoch 6/10, curr_step:4430/8200 curr_loss 0.1614990234375 lr:5.354398526154365e-05 use time:13.7771897315979s
+Beginning of Epoch 6/10, curr_step:4440/8200 curr_loss 0.144775390625 lr:5.320695090574386e-05 use time:14.284451961517334s
+Beginning of Epoch 6/10, curr_step:4450/8200 curr_loss 0.055877685546875 lr:5.30383778732328e-05 use time:14.266840696334839s
+Beginning of Epoch 6/10, curr_step:4460/8200 curr_loss 0.0223846435546875 lr:5.2869770169015034e-05 use time:14.743622779846191s
+Beginning of Epoch 6/10, curr_step:4470/8200 curr_loss 0.45068359375 lr:5.2701129717116215e-05 use time:14.472516298294067s
+[2024-12-12 01:37:30,709] [INFO] [logging.py:96:log_dist] [Rank 0] step=560, skipped=9, lr=[5.236375826822435e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:37:30,724] [INFO] [timer.py:264:stop] epoch=5/micro_step=380/global_step=560, RunningAvgSamplesPerSec=5.667183926381193, CurrSamplesPerSec=5.9341832326810335, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 6/10, curr_step:4480/8200 curr_loss 0.06903076171875 lr:5.236375826822435e-05 use time:13.734178066253662s
+Beginning of Epoch 6/10, curr_step:4490/8200 curr_loss 0.0103607177734375 lr:5.219503112106314e-05 use time:13.968504190444946s
+Beginning of Epoch 6/10, curr_step:4500/8200 curr_loss 0.2071533203125 lr:5.2026278925840656e-05 use time:14.506669282913208s
+Beginning of Epoch 6/10, curr_step:4510/8200 curr_loss 0.025177001953125 lr:5.1857503608231304e-05 use time:14.388985633850098s
+Beginning of Epoch 6/10, curr_step:4520/8200 curr_loss 0.486083984375 lr:5.151989130984715e-05 use time:14.179337501525879s
+Beginning of Epoch 6/10, curr_step:4530/8200 curr_loss 0.06402587890625 lr:5.1351058181652554e-05 use time:14.58397388458252s
+Beginning of Epoch 6/10, curr_step:4540/8200 curr_loss 0.07952880859375 lr:5.1182209636187674e-05 use time:15.001374244689941s
+Beginning of Epoch 6/10, curr_step:4550/8200 curr_loss 0.303955078125 lr:5.101334760022639e-05 use time:14.335671186447144s
+[2024-12-12 01:39:25,671] [INFO] [logging.py:96:log_dist] [Rank 0] step=570, skipped=9, lr=[5.067559076465802e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:39:25,686] [INFO] [timer.py:264:stop] epoch=5/micro_step=460/global_step=570, RunningAvgSamplesPerSec=5.665863071411594, CurrSamplesPerSec=5.7913525055297965, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 6/10, curr_step:4560/8200 curr_loss 0.09405517578125 lr:5.067559076465802e-05 use time:13.989303350448608s
+Beginning of Epoch 6/10, curr_step:4570/8200 curr_loss 0.005947113037109375 lr:5.0506699819280556e-05 use time:13.877300024032593s
+Beginning of Epoch 6/10, curr_step:4580/8200 curr_loss 0.1890869140625 lr:5.03378030918219e-05 use time:14.333977460861206s
+Beginning of Epoch 6/10, curr_step:4590/8200 curr_loss 0.122802734375 lr:5.016890250960582e-05 use time:13.809090852737427s
+Beginning of Epoch 6/10, curr_step:4600/8200 curr_loss 0.11865234375 lr:4.9831097490394194e-05 use time:14.204344749450684s
+Beginning of Epoch 6/10, curr_step:4610/8200 curr_loss 0.2113037109375 lr:4.96621969081781e-05 use time:14.899306058883667s
+Beginning of Epoch 6/10, curr_step:4620/8200 curr_loss 0.0306854248046875 lr:4.949330018071946e-05 use time:14.198036909103394s
+Beginning of Epoch 6/10, curr_step:4630/8200 curr_loss 0.0272674560546875 lr:4.932440923534199e-05 use time:14.25755500793457s
+[2024-12-12 01:41:19,783] [INFO] [logging.py:96:log_dist] [Rank 0] step=580, skipped=9, lr=[4.8986652399773624e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:41:19,797] [INFO] [timer.py:264:stop] epoch=5/micro_step=540/global_step=580, RunningAvgSamplesPerSec=5.66534571333037, CurrSamplesPerSec=5.521596472847376, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 6/10, curr_step:4640/8200 curr_loss 0.0933837890625 lr:4.8986652399773624e-05 use time:14.392829895019531s
+Beginning of Epoch 6/10, curr_step:4650/8200 curr_loss 0.0031719207763671875 lr:4.881779036381234e-05 use time:14.379340648651123s
+Beginning of Epoch 6/10, curr_step:4660/8200 curr_loss 0.150146484375 lr:4.864894181834746e-05 use time:14.13833236694336s
+Beginning of Epoch 6/10, curr_step:4670/8200 curr_loss 1.6787109375 lr:4.8480108690152876e-05 use time:13.760576009750366s
+Beginning of Epoch 6/10, curr_step:4680/8200 curr_loss 0.07427978515625 lr:4.81424963917687e-05 use time:14.022510766983032s
+Beginning of Epoch 6/10, curr_step:4690/8200 curr_loss 0.200439453125 lr:4.797372107415935e-05 use time:14.249537467956543s
+Beginning of Epoch 6/10, curr_step:4700/8200 curr_loss 0.0016918182373046875 lr:4.780496887893686e-05 use time:14.580352783203125s
+Beginning of Epoch 6/10, curr_step:4710/8200 curr_loss 1.1572265625 lr:4.763624173177567e-05 use time:14.085488080978394s
+[2024-12-12 01:43:13,170] [INFO] [logging.py:96:log_dist] [Rank 0] step=590, skipped=9, lr=[4.72988702828838e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:43:13,184] [INFO] [timer.py:264:stop] epoch=5/micro_step=620/global_step=590, RunningAvgSamplesPerSec=5.665423038359774, CurrSamplesPerSec=5.592563417122909, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 6/10, curr_step:4720/8200 curr_loss 0.3017578125 lr:4.72988702828838e-05 use time:14.23888349533081s
+Beginning of Epoch 6/10, curr_step:4730/8200 curr_loss 0.046630859375 lr:4.7130229830984964e-05 use time:13.769173860549927s
+Beginning of Epoch 6/10, curr_step:4740/8200 curr_loss 0.0134429931640625 lr:4.69616221267672e-05 use time:14.485094785690308s
+Beginning of Epoch 6/10, curr_step:4750/8200 curr_loss 0.11566162109375 lr:4.6793049094256144e-05 use time:13.686051607131958s
+Beginning of Epoch 6/10, curr_step:4760/8200 curr_loss 0.056884765625 lr:4.6456014738456356e-05 use time:14.169023036956787s
+Beginning of Epoch 6/10, curr_step:4770/8200 curr_loss 0.1630859375 lr:4.628755726115284e-05 use time:14.536427736282349s
+Beginning of Epoch 6/10, curr_step:4780/8200 curr_loss 0.51708984375 lr:4.6119142147482495e-05 use time:14.61482286453247s
+Beginning of Epoch 6/10, curr_step:4790/8200 curr_loss 0.346435546875 lr:4.59507713192733e-05 use time:13.593058586120605s
+[2024-12-12 01:45:06,677] [INFO] [logging.py:96:log_dist] [Rank 0] step=600, skipped=9, lr=[4.5614170204001196e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:45:06,692] [INFO] [timer.py:264:stop] epoch=5/micro_step=700/global_step=600, RunningAvgSamplesPerSec=5.665398892413441, CurrSamplesPerSec=5.392369197372132, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 6/10, curr_step:4800/8200 curr_loss 0.33837890625 lr:4.5614170204001196e-05 use time:14.748652458190918s
+Beginning of Epoch 6/10, curr_step:4810/8200 curr_loss 0.005558013916015625 lr:4.544594375797968e-05 use time:14.934568405151367s
+Beginning of Epoch 6/10, curr_step:4820/8200 curr_loss 0.051666259765625 lr:4.527776927945822e-05 use time:13.972697973251343s
+Beginning of Epoch 6/10, curr_step:4830/8200 curr_loss 0.032379150390625 lr:4.5109648687518785e-05 use time:14.124755382537842s
+Beginning of Epoch 6/10, curr_step:4840/8200 curr_loss 0.42724609375 lr:4.477357683661734e-05 use time:14.40299391746521s
+Beginning of Epoch 6/10, curr_step:4850/8200 curr_loss 0.03790283203125 lr:4.460562941265714e-05 use time:14.493833303451538s
+Beginning of Epoch 6/10, curr_step:4860/8200 curr_loss 0.090576171875 lr:4.443774354523882e-05 use time:13.923337697982788s
+Beginning of Epoch 6/10, curr_step:4870/8200 curr_loss 0.06048583984375 lr:4.426992115015094e-05 use time:14.536020755767822s
+[2024-12-12 01:47:01,970] [INFO] [logging.py:96:log_dist] [Rank 0] step=610, skipped=9, lr=[4.3934474436477257e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:47:01,985] [INFO] [timer.py:264:stop] epoch=5/micro_step=780/global_step=610, RunningAvgSamplesPerSec=5.663902798688346, CurrSamplesPerSec=5.357044563209273, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 6/10, curr_step:4880/8200 curr_loss 0.050750732421875 lr:4.3934474436477257e-05 use time:14.788720846176147s
+Beginning of Epoch 6/10, curr_step:4890/8200 curr_loss 0.005153656005859375 lr:4.376685394575971e-05 use time:14.077160596847534s
+Beginning of Epoch 6/10, curr_step:4900/8200 curr_loss 0.10247802734375 lr:4.35993045830653e-05 use time:14.233824491500854s
+Beginning of Epoch 6/10, curr_step:4910/8200 curr_loss 0.2486572265625 lr:4.3431828260342674e-05 use time:13.853408813476562s
+[2024-12-12 01:47:46,871] [INFO] [loss_scaler.py:190:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, but hysteresis is 2. Reducing hysteresis to 1
+[2024-12-12 01:47:57,852] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, reducing to 65536
+saving model ...
+saving success ...
+Beginning of Epoch 7/10, Total Micro Batches 820
+Beginning of Epoch 7/10, curr_step:4920/8200 curr_loss 0.62255859375 lr:4.3431828260342674e-05 use time:14.586803197860718s
+Beginning of Epoch 7/10, curr_step:4930/8200 curr_loss 0.004283905029296875 lr:4.3264426888706965e-05 use time:13.180617570877075s
+Beginning of Epoch 7/10, curr_step:4940/8200 curr_loss 0.08758544921875 lr:4.309710237841798e-05 use time:14.526477098464966s
+Beginning of Epoch 7/10, curr_step:4950/8200 curr_loss 0.2396240234375 lr:4.292985663885854e-05 use time:14.696488380432129s
+[2024-12-12 01:48:55,256] [INFO] [logging.py:96:log_dist] [Rank 0] step=620, skipped=11, lr=[4.259560910494309e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:48:55,272] [INFO] [timer.py:264:stop] epoch=6/micro_step=40/global_step=620, RunningAvgSamplesPerSec=5.6647922221044595, CurrSamplesPerSec=5.602535044172576, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 7/10, curr_step:4960/8200 curr_loss 0.0050506591796875 lr:4.259560910494309e-05 use time:14.10441517829895s
+Beginning of Epoch 7/10, curr_step:4970/8200 curr_loss 0.015777587890625 lr:4.2428611124771184e-05 use time:14.623204469680786s
+Beginning of Epoch 7/10, curr_step:4980/8200 curr_loss 0.0014209747314453125 lr:4.2261699543653365e-05 use time:13.889922142028809s
+Beginning of Epoch 7/10, curr_step:4990/8200 curr_loss 0.007091522216796875 lr:4.209487626626039e-05 use time:13.981043577194214s
+Beginning of Epoch 7/10, curr_step:5000/8200 curr_loss 0.30859375 lr:4.176150223627186e-05 use time:14.287168741226196s
+Beginning of Epoch 7/10, curr_step:5010/8200 curr_loss 0.2239990234375 lr:4.15949552878926e-05 use time:14.195583581924438s
+Beginning of Epoch 7/10, curr_step:5020/8200 curr_loss 0.1072998046875 lr:4.1428504251627335e-05 use time:14.274281024932861s
+Beginning of Epoch 7/10, curr_step:5030/8200 curr_loss 0.0108642578125 lr:4.126215102689137e-05 use time:13.863183498382568s
+[2024-12-12 01:50:48,715] [INFO] [logging.py:96:log_dist] [Rank 0] step=630, skipped=11, lr=[4.092974560406635e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:50:48,730] [INFO] [timer.py:264:stop] epoch=6/micro_step=120/global_step=630, RunningAvgSamplesPerSec=5.66480332788765, CurrSamplesPerSec=5.541599579605145, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 7/10, curr_step:5040/8200 curr_loss 0.10498046875 lr:4.092974560406635e-05 use time:14.415339231491089s
+Beginning of Epoch 7/10, curr_step:5050/8200 curr_loss 0.372802734375 lr:4.076369719914055e-05 use time:13.854835748672485s
+Beginning of Epoch 7/10, curr_step:5060/8200 curr_loss 0.0209503173828125 lr:4.0597754192027296e-05 use time:14.01007866859436s
+Beginning of Epoch 7/10, curr_step:5070/8200 curr_loss 0.0014247894287109375 lr:4.043191847634469e-05 use time:13.625038862228394s
+Beginning of Epoch 7/10, curr_step:5080/8200 curr_loss 0.04681396484375 lr:4.010057648760047e-05 use time:14.599820375442505s
+Beginning of Epoch 7/10, curr_step:5090/8200 curr_loss 0.89697265625 lr:3.993507399556699e-05 use time:14.0570228099823s
+Beginning of Epoch 7/10, curr_step:5100/8200 curr_loss 0.0038604736328125 lr:3.976968635697732e-05 use time:14.016278505325317s
+Beginning of Epoch 7/10, curr_step:5110/8200 curr_loss 0.010528564453125 lr:3.960441545911204e-05 use time:14.904083251953125s
+[2024-12-12 01:52:41,783] [INFO] [logging.py:96:log_dist] [Rank 0] step=640, skipped=11, lr=[3.927423142799489e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:52:41,798] [INFO] [timer.py:264:stop] epoch=6/micro_step=200/global_step=640, RunningAvgSamplesPerSec=5.665110493998766, CurrSamplesPerSec=5.7786638036031865, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 7/10, curr_step:5120/8200 curr_loss 0.0643310546875 lr:3.927423142799489e-05 use time:13.914174318313599s
+Beginning of Epoch 7/10, curr_step:5130/8200 curr_loss 0.011810302734375 lr:3.9109322062557424e-05 use time:14.603149175643921s
+Beginning of Epoch 7/10, curr_step:5140/8200 curr_loss 0.30078125 lr:3.894453697343016e-05 use time:14.204724073410034s
+Beginning of Epoch 7/10, curr_step:5150/8200 curr_loss 0.037689208984375 lr:3.877987804101786e-05 use time:13.90722131729126s
+Beginning of Epoch 7/10, curr_step:5160/8200 curr_loss 0.0188140869140625 lr:3.845094616073783e-05 use time:13.937875509262085s
+Beginning of Epoch 7/10, curr_step:5170/8200 curr_loss 0.2086181640625 lr:3.82866769663959e-05 use time:14.264781475067139s
+Beginning of Epoch 7/10, curr_step:5180/8200 curr_loss 0.295166015625 lr:3.812254143577767e-05 use time:14.121455907821655s
+Beginning of Epoch 7/10, curr_step:5190/8200 curr_loss 0.02001953125 lr:3.7958541441875626e-05 use time:14.090404033660889s
+[2024-12-12 01:54:35,357] [INFO] [logging.py:96:log_dist] [Rank 0] step=650, skipped=11, lr=[3.7630955548435595e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:54:35,372] [INFO] [timer.py:264:stop] epoch=6/micro_step=280/global_step=650, RunningAvgSamplesPerSec=5.665005766407838, CurrSamplesPerSec=5.509661671190753, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 7/10, curr_step:5200/8200 curr_loss 0.154296875 lr:3.7630955548435595e-05 use time:14.727903366088867s
+Beginning of Epoch 7/10, curr_step:5210/8200 curr_loss 0.0977783203125 lr:3.746737338706397e-05 use time:14.049669981002808s
+Beginning of Epoch 7/10, curr_step:5220/8200 curr_loss 0.01398468017578125 lr:3.7303934238698675e-05 use time:14.318956851959229s
+Beginning of Epoch 7/10, curr_step:5230/8200 curr_loss 0.10211181640625 lr:3.714063996838558e-05 use time:13.912335872650146s
+Beginning of Epoch 7/10, curr_step:5240/8200 curr_loss 0.060791015625 lr:3.681449351381216e-05 use time:14.120043277740479s
+Beginning of Epoch 7/10, curr_step:5250/8200 curr_loss 0.0268707275390625 lr:3.6651645051292415e-05 use time:14.000471353530884s
+Beginning of Epoch 7/10, curr_step:5260/8200 curr_loss 0.361328125 lr:3.6488948910263584e-05 use time:14.055482387542725s
+Beginning of Epoch 7/10, curr_step:5270/8200 curr_loss 0.006359100341796875 lr:3.632640694729287e-05 use time:14.342005491256714s
+[2024-12-12 01:56:29,004] [INFO] [logging.py:96:log_dist] [Rank 0] step=660, skipped=11, lr=[3.600179297297696e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:56:29,019] [INFO] [timer.py:264:stop] epoch=6/micro_step=360/global_step=660, RunningAvgSamplesPerSec=5.6648983870964695, CurrSamplesPerSec=5.458187347247414, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 7/10, curr_step:5280/8200 curr_loss 0.036346435546875 lr:3.600179297297696e-05 use time:14.626381158828735s
+Beginning of Epoch 7/10, curr_step:5290/8200 curr_loss 0.07464599609375 lr:3.58397246658848e-05 use time:14.651577711105347s
+Beginning of Epoch 7/10, curr_step:5300/8200 curr_loss 0.0179901123046875 lr:3.5677817945314606e-05 use time:13.8643798828125s
+Beginning of Epoch 7/10, curr_step:5310/8200 curr_loss 0.371337890625 lr:3.55160746588254e-05 use time:13.997568130493164s
+Beginning of Epoch 7/10, curr_step:5320/8200 curr_loss 0.07861328125 lr:3.519308576897974e-05 use time:14.343079328536987s
+Beginning of Epoch 7/10, curr_step:5330/8200 curr_loss 0.09307861328125 lr:3.5031843851332104e-05 use time:14.328781366348267s
+Beginning of Epoch 7/10, curr_step:5340/8200 curr_loss 0.0008425712585449219 lr:3.4870772739140955e-05 use time:14.0514657497406s
+Beginning of Epoch 7/10, curr_step:5350/8200 curr_loss 0.06182861328125 lr:3.4709874270429966e-05 use time:14.93323540687561s
+[2024-12-12 01:58:23,736] [INFO] [logging.py:96:log_dist] [Rank 0] step=670, skipped=11, lr=[3.4388602605671536e-05], mom=[(0.9, 0.95)]
+[2024-12-12 01:58:23,751] [INFO] [timer.py:264:stop] epoch=6/micro_step=440/global_step=670, RunningAvgSamplesPerSec=5.663953904067202, CurrSamplesPerSec=5.610684804826138, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 7/10, curr_step:5360/8200 curr_loss 0.1676025390625 lr:3.4388602605671536e-05 use time:14.671206951141357s
+Beginning of Epoch 7/10, curr_step:5370/8200 curr_loss 0.0926513671875 lr:3.422823307573722e-05 use time:14.444423913955688s
+Beginning of Epoch 7/10, curr_step:5380/8200 curr_loss 0.08038330078125 lr:3.406804352146742e-05 use time:13.982866048812866s
+Beginning of Epoch 7/10, curr_step:5390/8200 curr_loss 0.00470733642578125 lr:3.390803577082609e-05 use time:14.211726665496826s
+Beginning of Epoch 7/10, curr_step:5400/8200 curr_loss 0.313720703125 lr:3.3588572981890685e-05 use time:14.068538665771484s
+Beginning of Epoch 7/10, curr_step:5410/8200 curr_loss 0.0478515625 lr:3.3429121589068215e-05 use time:13.88949203491211s
+Beginning of Epoch 7/10, curr_step:5420/8200 curr_loss 0.00881195068359375 lr:3.3269859290775704e-05 use time:14.243314504623413s
+Beginning of Epoch 7/10, curr_step:5430/8200 curr_loss 0.08465576171875 lr:3.3110787904395976e-05 use time:14.258173704147339s
+[2024-12-12 02:00:17,192] [INFO] [logging.py:96:log_dist] [Rank 0] step=680, skipped=11, lr=[3.279322512599259e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:00:17,207] [INFO] [timer.py:264:stop] epoch=6/micro_step=520/global_step=680, RunningAvgSamplesPerSec=5.6639962660699155, CurrSamplesPerSec=5.618660491678622, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 7/10, curr_step:5440/8200 curr_loss 0.251953125 lr:3.279322512599259e-05 use time:14.204315423965454s
+Beginning of Epoch 7/10, curr_step:5450/8200 curr_loss 0.0401611328125 lr:3.263473735775899e-05 use time:13.882378816604614s
+Beginning of Epoch 7/10, curr_step:5460/8200 curr_loss 0.006153106689453125 lr:3.2476447748976905e-05 use time:14.14565110206604s
+Beginning of Epoch 7/10, curr_step:5470/8200 curr_loss 0.05224609375 lr:3.231835810592954e-05 use time:13.915184497833252s
+Beginning of Epoch 7/10, curr_step:5480/8200 curr_loss 0.0003311634063720703 lr:3.200278593074185e-05 use time:14.516895771026611s
+Beginning of Epoch 7/10, curr_step:5490/8200 curr_loss 0.10260009765625 lr:3.1845306999676275e-05 use time:14.166123151779175s
+Beginning of Epoch 7/10, curr_step:5500/8200 curr_loss 0.464111328125 lr:3.168803523645387e-05 use time:14.049827814102173s
+Beginning of Epoch 7/10, curr_step:5510/8200 curr_loss 0.1309814453125 lr:3.15309724357429e-05 use time:14.061648607254028s
+[2024-12-12 02:02:10,388] [INFO] [logging.py:96:log_dist] [Rank 0] step=690, skipped=11, lr=[3.121748088858549e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:02:10,402] [INFO] [timer.py:264:stop] epoch=6/micro_step=600/global_step=690, RunningAvgSamplesPerSec=5.6642219000647644, CurrSamplesPerSec=5.464924894348254, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 7/10, curr_step:5520/8200 curr_loss 0.00457000732421875 lr:3.121748088858549e-05 use time:14.573657512664795s
+Beginning of Epoch 7/10, curr_step:5530/8200 curr_loss 0.0948486328125 lr:3.10610557194712e-05 use time:13.965682744979858s
+Beginning of Epoch 7/10, curr_step:5540/8200 curr_loss 0.01226806640625 lr:3.090484666749193e-05 use time:14.377552270889282s
+Beginning of Epoch 7/10, curr_step:5550/8200 curr_loss 0.055938720703125 lr:3.0748855515189104e-05 use time:13.943090200424194s
+Beginning of Epoch 7/10, curr_step:5560/8200 curr_loss 0.0031719207763671875 lr:3.0437534027325633e-05 use time:14.421727657318115s
+Beginning of Epoch 7/10, curr_step:5570/8200 curr_loss 0.061248779296875 lr:3.0282207244334082e-05 use time:13.87985873222351s
+Beginning of Epoch 7/10, curr_step:5580/8200 curr_loss 0.09454345703125 lr:3.0127105466116588e-05 use time:14.178287029266357s
+Beginning of Epoch 7/10, curr_step:5590/8200 curr_loss 0.0240631103515625 lr:2.9972230462579244e-05 use time:14.211159944534302s
+[2024-12-12 02:04:03,893] [INFO] [logging.py:96:log_dist] [Rank 0] step=700, skipped=11, lr=[2.9663167846209998e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:04:03,908] [INFO] [timer.py:264:stop] epoch=6/micro_step=680/global_step=700, RunningAvgSamplesPerSec=5.664226753250433, CurrSamplesPerSec=5.5339284047689725, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 7/10, curr_step:5600/8200 curr_loss 0.0018911361694335938 lr:2.9663167846209998e-05 use time:14.459035634994507s
+Beginning of Epoch 7/10, curr_step:5610/8200 curr_loss 0.03802490234375 lr:2.950898376017064e-05 use time:13.551271677017212s
+Beginning of Epoch 7/10, curr_step:5620/8200 curr_loss 0.257080078125 lr:2.93550335023562e-05 use time:14.448318243026733s
+Beginning of Epoch 7/10, curr_step:5630/8200 curr_loss 1.1982421875 lr:2.9201318829532447e-05 use time:14.689771890640259s
+Beginning of Epoch 7/10, curr_step:5640/8200 curr_loss 0.136962890625 lr:2.8894603252458408e-05 use time:14.111544847488403s
+Beginning of Epoch 7/10, curr_step:5650/8200 curr_loss 0.0714111328125 lr:2.874160584821798e-05 use time:13.676331281661987s
+Beginning of Epoch 7/10, curr_step:5660/8200 curr_loss 0.0007143020629882812 lr:2.8588851028948004e-05 use time:14.146589994430542s
+Beginning of Epoch 7/10, curr_step:5670/8200 curr_loss 0.2060546875 lr:2.84363405377728e-05 use time:14.370266914367676s
+[2024-12-12 02:05:56,898] [INFO] [logging.py:96:log_dist] [Rank 0] step=710, skipped=11, lr=[2.813205949824358e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:05:56,913] [INFO] [timer.py:264:stop] epoch=6/micro_step=760/global_step=710, RunningAvgSamplesPerSec=5.66458044151418, CurrSamplesPerSec=5.731687097759232, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 7/10, curr_step:5680/8200 curr_loss 0.0408935546875 lr:2.813205949824358e-05 use time:14.013534545898438s
+Beginning of Epoch 7/10, curr_step:5690/8200 curr_loss 0.1466064453125 lr:2.798029242211828e-05 use time:14.453589916229248s
+Beginning of Epoch 7/10, curr_step:5700/8200 curr_loss 0.0012006759643554688 lr:2.7828776618505614e-05 use time:14.519258737564087s
+Beginning of Epoch 7/10, curr_step:5710/8200 curr_loss 0.056365966796875 lr:2.767751381639111e-05 use time:14.278168678283691s
+Beginning of Epoch 7/10, curr_step:5720/8200 curr_loss 0.00865936279296875 lr:2.7375754118143932e-05 use time:14.451209306716919s
+[2024-12-12 02:07:05,559] [INFO] [loss_scaler.py:190:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, but hysteresis is 2. Reducing hysteresis to 1
+Beginning of Epoch 7/10, curr_step:5730/8200 curr_loss 0.10369873046875 lr:2.7375754118143932e-05 use time:13.550734281539917s
+[2024-12-12 02:07:16,485] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, reducing to 65536
+saving model ...
+saving success ...
+Beginning of Epoch 8/10, Total Micro Batches 820
+Beginning of Epoch 8/10, curr_step:5740/8200 curr_loss 0.06524658203125 lr:2.7375754118143932e-05 use time:14.35999059677124s
+Beginning of Epoch 8/10, curr_step:5750/8200 curr_loss 0.03753662109375 lr:2.72252606654683e-05 use time:13.304548025131226s
+[2024-12-12 02:07:50,156] [INFO] [logging.py:96:log_dist] [Rank 0] step=720, skipped=13, lr=[2.6925055139589706e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:07:50,170] [INFO] [timer.py:264:stop] epoch=7/micro_step=20/global_step=720, RunningAvgSamplesPerSec=5.665343681880168, CurrSamplesPerSec=5.556730061955053, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 8/10, curr_step:5760/8200 curr_loss 0.82275390625 lr:2.6925055139589706e-05 use time:14.31914496421814s
+Beginning of Epoch 8/10, curr_step:5770/8200 curr_loss 0.12127685546875 lr:2.6775346492108734e-05 use time:14.593610048294067s
+Beginning of Epoch 8/10, curr_step:5780/8200 curr_loss 0.00209808349609375 lr:2.662590286708645e-05 use time:14.015522718429565s
+Beginning of Epoch 8/10, curr_step:5790/8200 curr_loss 0.006866455078125 lr:2.6476725969862227e-05 use time:14.438422679901123s
+Beginning of Epoch 8/10, curr_step:5800/8200 curr_loss 0.08404541015625 lr:2.6179179164927758e-05 use time:14.232917308807373s
+Beginning of Epoch 8/10, curr_step:5810/8200 curr_loss 0.005596160888671875 lr:2.6030812652600157e-05 use time:14.076075792312622s
+Beginning of Epoch 8/10, curr_step:5820/8200 curr_loss 1.1923828125 lr:2.5882719658797233e-05 use time:14.491705179214478s
+Beginning of Epoch 8/10, curr_step:5830/8200 curr_loss 0.01287078857421875 lr:2.573490187344596e-05 use time:14.662119626998901s
+[2024-12-12 02:09:44,812] [INFO] [logging.py:96:log_dist] [Rank 0] step=730, skipped=13, lr=[2.5440098672084843e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:09:44,827] [INFO] [timer.py:264:stop] epoch=7/micro_step=100/global_step=730, RunningAvgSamplesPerSec=5.664507533454898, CurrSamplesPerSec=5.6340029146718225, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 8/10, curr_step:5840/8200 curr_loss 0.011810302734375 lr:2.5440098672084843e-05 use time:14.280645370483398s
+Beginning of Epoch 8/10, curr_step:5850/8200 curr_loss 0.04901123046875 lr:2.529311662014972e-05 use time:14.070479393005371s
+Beginning of Epoch 8/10, curr_step:5860/8200 curr_loss 0.6201171875 lr:2.5146416504777258e-05 use time:14.343754053115845s
+Beginning of Epoch 8/10, curr_step:5870/8200 curr_loss 0.2069091796875 lr:2.500000000000001e-05 use time:14.145288228988647s
+Beginning of Epoch 8/10, curr_step:5880/8200 curr_loss 0.03753662109375 lr:2.4708024502160325e-05 use time:14.234094858169556s
+Beginning of Epoch 8/10, curr_step:5890/8200 curr_loss 0.0006008148193359375 lr:2.456246884090498e-05 use time:13.75754451751709s
+Beginning of Epoch 8/10, curr_step:5900/8200 curr_loss 0.00982666015625 lr:2.4417203453820892e-05 use time:14.431568622589111s
+Beginning of Epoch 8/10, curr_step:5910/8200 curr_loss 0.0982666015625 lr:2.4272229998568575e-05 use time:14.044217586517334s
+[2024-12-12 02:11:37,740] [INFO] [logging.py:96:log_dist] [Rank 0] step=740, skipped=13, lr=[2.39831654975256e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:11:37,754] [INFO] [timer.py:264:stop] epoch=7/micro_step=180/global_step=740, RunningAvgSamplesPerSec=5.6648926530178185, CurrSamplesPerSec=5.890740512796845, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 8/10, curr_step:5920/8200 curr_loss 0.01369476318359375 lr:2.39831654975256e-05 use time:13.990653276443481s
+Beginning of Epoch 8/10, curr_step:5930/8200 curr_loss 0.2139892578125 lr:2.383907775032389e-05 use time:14.681827306747437s
+Beginning of Epoch 8/10, curr_step:5940/8200 curr_loss 0.25341796875 lr:2.369528853209415e-05 use time:13.7393057346344s
+Beginning of Epoch 8/10, curr_step:5950/8200 curr_loss 0.0038242340087890625 lr:2.3551799483651894e-05 use time:14.827758312225342s
+Beginning of Epoch 8/10, curr_step:5960/8200 curr_loss 0.08331298828125 lr:2.326572844224665e-05 use time:14.277957439422607s
+Beginning of Epoch 8/10, curr_step:5970/8200 curr_loss 0.12237548828125 lr:2.312314971371347e-05 use time:13.841205358505249s
+Beginning of Epoch 8/10, curr_step:5980/8200 curr_loss 0.0033092498779296875 lr:2.298087768379012e-05 use time:13.619625329971313s
+Beginning of Epoch 8/10, curr_step:5990/8200 curr_loss 0.1859130859375 lr:2.283891397597908e-05 use time:13.79460620880127s
+[2024-12-12 02:13:30,995] [INFO] [logging.py:96:log_dist] [Rank 0] step=750, skipped=13, lr=[2.2555918003093735e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:13:31,010] [INFO] [timer.py:264:stop] epoch=7/micro_step=260/global_step=750, RunningAvgSamplesPerSec=5.665056924337517, CurrSamplesPerSec=5.586003750423205, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 8/10, curr_step:6000/8200 curr_loss 0.067138671875 lr:2.2555918003093735e-05 use time:14.186365365982056s
+Beginning of Epoch 8/10, curr_step:6010/8200 curr_loss 0.00341033935546875 lr:2.2414888967358844e-05 use time:14.03795862197876s
+Beginning of Epoch 8/10, curr_step:6020/8200 curr_loss 0.00490570068359375 lr:2.227417471237821e-05 use time:14.614229917526245s
+Beginning of Epoch 8/10, curr_step:6030/8200 curr_loss 0.023223876953125 lr:2.2133776843878186e-05 use time:14.230250120162964s
+Beginning of Epoch 8/10, curr_step:6040/8200 curr_loss 0.0019245147705078125 lr:2.1853936671155127e-05 use time:14.233947277069092s
+Beginning of Epoch 8/10, curr_step:6050/8200 curr_loss 0.394287109375 lr:2.1714497560259855e-05 use time:13.940011501312256s
+Beginning of Epoch 8/10, curr_step:6060/8200 curr_loss 0.407470703125 lr:2.1575381222464237e-05 use time:14.159813165664673s
+Beginning of Epoch 8/10, curr_step:6070/8200 curr_loss 0.10589599609375 lr:2.1436589245260376e-05 use time:13.997730731964111s
+[2024-12-12 02:15:24,201] [INFO] [logging.py:96:log_dist] [Rank 0] step=760, skipped=13, lr=[2.115998470407147e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:15:24,216] [INFO] [timer.py:264:stop] epoch=7/micro_step=340/global_step=760, RunningAvgSamplesPerSec=5.665223861548941, CurrSamplesPerSec=5.724594912852706, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 8/10, curr_step:6080/8200 curr_loss 0.1201171875 lr:2.115998470407147e-05 use time:13.946576118469238s
+Beginning of Epoch 8/10, curr_step:6090/8200 curr_loss 0.017242431640625 lr:2.1022175296491515e-05 use time:14.444145202636719s
+Beginning of Epoch 8/10, curr_step:6100/8200 curr_loss 0.0109100341796875 lr:2.0884696562277566e-05 use time:14.604990243911743s
+Beginning of Epoch 8/10, curr_step:6110/8200 curr_loss 0.039215087890625 lr:2.074755007023461e-05 use time:14.58229374885559s
+Beginning of Epoch 8/10, curr_step:6120/8200 curr_loss 0.0182952880859375 lr:2.047426006890728e-05 use time:13.706740856170654s
+Beginning of Epoch 8/10, curr_step:6130/8200 curr_loss 0.417236328125 lr:2.0338119678204942e-05 use time:13.691888332366943s
+Beginning of Epoch 8/10, curr_step:6140/8200 curr_loss 0.18505859375 lr:2.0202317766802154e-05 use time:14.364109992980957s
+Beginning of Epoch 8/10, curr_step:6150/8200 curr_loss 0.0110321044921875 lr:2.0066855884369244e-05 use time:14.473123550415039s
+[2024-12-12 02:17:18,048] [INFO] [logging.py:96:log_dist] [Rank 0] step=770, skipped=13, lr=[1.9796958385675967e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:17:18,063] [INFO] [timer.py:264:stop] epoch=7/micro_step=420/global_step=770, RunningAvgSamplesPerSec=5.664973205510852, CurrSamplesPerSec=5.695614472200519, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 8/10, curr_step:6160/8200 curr_loss 0.0025424957275390625 lr:1.9796958385675967e-05 use time:14.061611413955688s
+Beginning of Epoch 8/10, curr_step:6170/8200 curr_loss 0.015411376953125 lr:1.9662525849284962e-05 use time:14.67521858215332s
+Beginning of Epoch 8/10, curr_step:6180/8200 curr_loss 0.00304412841796875 lr:1.9528439501567386e-05 use time:15.041346311569214s
+Beginning of Epoch 8/10, curr_step:6190/8200 curr_loss 0.22021484375 lr:1.9394700872616855e-05 use time:13.955494403839111s
+Beginning of Epoch 8/10, curr_step:6200/8200 curr_loss 0.036529541015625 lr:1.9128272871534362e-05 use time:14.037140130996704s
+Beginning of Epoch 8/10, curr_step:6210/8200 curr_loss 0.01300811767578125 lr:1.8995586539680422e-05 use time:13.791390895843506s
+Beginning of Epoch 8/10, curr_step:6220/8200 curr_loss 0.186279296875 lr:1.886325400711491e-05 use time:14.013927221298218s
+Beginning of Epoch 8/10, curr_step:6230/8200 curr_loss 0.057159423828125 lr:1.873127678391816e-05 use time:13.947023391723633s
+[2024-12-12 02:19:11,630] [INFO] [logging.py:96:log_dist] [Rank 0] step=780, skipped=13, lr=[1.8468394285662642e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:19:11,645] [INFO] [timer.py:264:stop] epoch=7/micro_step=500/global_step=780, RunningAvgSamplesPerSec=5.664915152191885, CurrSamplesPerSec=5.621327509056253, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 8/10, curr_step:6240/8200 curr_loss 0.0005249977111816406 lr:1.8468394285662642e-05 use time:14.519381046295166s
+Beginning of Epoch 8/10, curr_step:6250/8200 curr_loss 0.1258544921875 lr:1.8337492010423252e-05 use time:14.625812768936157s
+Beginning of Epoch 8/10, curr_step:6260/8200 curr_loss 0.44970703125 lr:1.820695104415721e-05 use time:13.90016484260559s
+Beginning of Epoch 8/10, curr_step:6270/8200 curr_loss 0.09991455078125 lr:1.807677287650083e-05 use time:14.37910270690918s
+Beginning of Epoch 8/10, curr_step:6280/8200 curr_loss 0.0054931640625 lr:1.7817510874845583e-05 use time:14.480801582336426s
+Beginning of Epoch 8/10, curr_step:6290/8200 curr_loss 0.039276123046875 lr:1.768842999935168e-05 use time:13.813996315002441s
+Beginning of Epoch 8/10, curr_step:6300/8200 curr_loss 0.0008959770202636719 lr:1.755971783944366e-05 use time:14.155245542526245s
+Beginning of Epoch 8/10, curr_step:6310/8200 curr_loss 0.0012159347534179688 lr:1.7431375863888898e-05 use time:13.520761966705322s
+[2024-12-12 02:21:04,765] [INFO] [logging.py:96:log_dist] [Rank 0] step=790, skipped=13, lr=[1.717580831977048e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:21:04,780] [INFO] [timer.py:264:stop] epoch=7/micro_step=580/global_step=790, RunningAvgSamplesPerSec=5.66513728630219, CurrSamplesPerSec=5.7249528780162535, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 8/10, curr_step:6320/8200 curr_loss 0.007694244384765625 lr:1.717580831977048e-05 use time:13.953822612762451s
+Beginning of Epoch 8/10, curr_step:6330/8200 curr_loss 0.0012044906616210938 lr:1.7048585667553412e-05 use time:14.192042589187622s
+Beginning of Epoch 8/10, curr_step:6340/8200 curr_loss 0.01074981689453125 lr:1.692173903234947e-05 use time:14.559406042098999s
+Beginning of Epoch 8/10, curr_step:6350/8200 curr_loss 0.0126953125 lr:1.6795269861638042e-05 use time:14.063826084136963s
+Beginning of Epoch 8/10, curr_step:6360/8200 curr_loss 0.0345458984375 lr:1.6543469682057106e-05 use time:14.197929620742798s
+Beginning of Epoch 8/10, curr_step:6370/8200 curr_loss 0.07025146484375 lr:1.6418141546543788e-05 use time:13.933645009994507s
+Beginning of Epoch 8/10, curr_step:6380/8200 curr_loss 0.0022640228271484375 lr:1.6293196622202635e-05 use time:14.5906982421875s
+Beginning of Epoch 8/10, curr_step:6390/8200 curr_loss 0.369873046875 lr:1.6168636334812125e-05 use time:13.623057842254639s
+[2024-12-12 02:22:57,905] [INFO] [logging.py:96:log_dist] [Rank 0] step=800, skipped=13, lr=[1.592067535203479e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:22:57,920] [INFO] [timer.py:264:stop] epoch=7/micro_step=660/global_step=800, RunningAvgSamplesPerSec=5.665350538199437, CurrSamplesPerSec=5.7644602783424705, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 8/10, curr_step:6400/8200 curr_loss 0.6953125 lr:1.592067535203479e-05 use time:14.076995134353638s
+Beginning of Epoch 8/10, curr_step:6410/8200 curr_loss 0.7158203125 lr:1.5797277486194133e-05 use time:13.953351736068726s
+Beginning of Epoch 8/10, curr_step:6420/8200 curr_loss 0.1080322265625 lr:1.5674269916364144e-05 use time:14.230610370635986s
+Beginning of Epoch 8/10, curr_step:6430/8200 curr_loss 0.007465362548828125 lr:1.555165404621567e-05 use time:13.721771001815796s
+Beginning of Epoch 8/10, curr_step:6440/8200 curr_loss 0.012359619140625 lr:1.5307602997281706e-05 use time:14.048033237457275s
+Beginning of Epoch 8/10, curr_step:6450/8200 curr_loss 0.08856201171875 lr:1.5186170603425132e-05 use time:14.790578842163086s
+Beginning of Epoch 8/10, curr_step:6460/8200 curr_loss 0.032318115234375 lr:1.5065135479076099e-05 use time:14.14491319656372s
+Beginning of Epoch 8/10, curr_step:6470/8200 curr_loss 0.00803375244140625 lr:1.4944499005397371e-05 use time:13.826784372329712s
+[2024-12-12 02:24:50,701] [INFO] [logging.py:96:log_dist] [Rank 0] step=810, skipped=13, lr=[1.4704427511940604e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:24:50,716] [INFO] [timer.py:264:stop] epoch=7/micro_step=740/global_step=810, RunningAvgSamplesPerSec=5.665766097580393, CurrSamplesPerSec=5.732468259660063, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 8/10, curr_step:6480/8200 curr_loss 0.002925872802734375 lr:1.4704427511940604e-05 use time:13.998851299285889s
+Beginning of Epoch 8/10, curr_step:6490/8200 curr_loss 0.005352020263671875 lr:1.4584995231679777e-05 use time:14.372695922851562s
+Beginning of Epoch 8/10, curr_step:6500/8200 curr_loss 0.0256805419921875 lr:1.4465967081092346e-05 use time:13.78463888168335s
+Beginning of Epoch 8/10, curr_step:6510/8200 curr_loss 0.0134124755859375 lr:1.434734441843899e-05 use time:14.524418592453003s
+Beginning of Epoch 8/10, curr_step:6520/8200 curr_loss 0.0021305084228515625 lr:1.4111320966826059e-05 use time:14.280022621154785s
+Beginning of Epoch 8/10, curr_step:6530/8200 curr_loss 0.01396942138671875 lr:1.3993922871190446e-05 use time:14.372273683547974s
+Beginning of Epoch 8/10, curr_step:6540/8200 curr_loss 0.122314453125 lr:1.3876935650106071e-05 use time:14.020782470703125s
+[2024-12-12 02:26:21,789] [INFO] [loss_scaler.py:190:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, but hysteresis is 2. Reducing hysteresis to 1
+Beginning of Epoch 8/10, curr_step:6550/8200 curr_loss 0.1563720703125 lr:1.3876935650106071e-05 use time:13.72097396850586s
+[2024-12-12 02:26:32,645] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, reducing to 65536
+[2024-12-12 02:26:43,280] [INFO] [logging.py:96:log_dist] [Rank 0] step=820, skipped=15, lr=[1.3760360638544012e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:26:43,295] [INFO] [timer.py:264:stop] epoch=7/micro_step=820/global_step=820, RunningAvgSamplesPerSec=5.666290247759929, CurrSamplesPerSec=6.034784562645891, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+saving model ...
+saving success ...
+Beginning of Epoch 9/10, Total Micro Batches 820
+Beginning of Epoch 9/10, curr_step:6560/8200 curr_loss 0.53369140625 lr:1.3760360638544012e-05 use time:14.307646989822388s
+Beginning of Epoch 9/10, curr_step:6570/8200 curr_loss 0.0216827392578125 lr:1.3644199166771532e-05 use time:13.775219202041626s
+Beginning of Epoch 9/10, curr_step:6580/8200 curr_loss 0.0927734375 lr:1.352845256033689e-05 use time:14.136659383773804s
+Beginning of Epoch 9/10, curr_step:6590/8200 curr_loss 0.0029926300048828125 lr:1.3413122140054218e-05 use time:14.856160879135132s
+Beginning of Epoch 9/10, curr_step:6600/8200 curr_loss 0.0140838623046875 lr:1.3183715117440142e-05 use time:13.978737115859985s
+Beginning of Epoch 9/10, curr_step:6610/8200 curr_loss 0.003993988037109375 lr:1.3069641132930926e-05 use time:14.624942302703857s
+Beginning of Epoch 9/10, curr_step:6620/8200 curr_loss 0.002178192138671875 lr:1.2955988570188155e-05 use time:13.9673912525177s
+Beginning of Epoch 9/10, curr_step:6630/8200 curr_loss 0.0083465576171875 lr:1.2842758726130283e-05 use time:13.885493516921997s
+[2024-12-12 02:28:37,430] [INFO] [logging.py:96:log_dist] [Rank 0] step=830, skipped=15, lr=[1.2617572357609564e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:28:37,445] [INFO] [timer.py:264:stop] epoch=8/micro_step=80/global_step=830, RunningAvgSamplesPerSec=5.666400487170451, CurrSamplesPerSec=5.748131410948292, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 9/10, curr_step:6640/8200 curr_loss 0.0025959014892578125 lr:1.2617572357609564e-05 use time:14.012798547744751s
+Beginning of Epoch 9/10, curr_step:6650/8200 curr_loss 0.0179901123046875 lr:1.2505618402805907e-05 use time:14.080223083496094s
+Beginning of Epoch 9/10, curr_step:6660/8200 curr_loss 0.0265350341796875 lr:1.2394092305976273e-05 use time:14.183376550674438s
+Beginning of Epoch 9/10, curr_step:6670/8200 curr_loss 0.0148162841796875 lr:1.2282995339773457e-05 use time:13.900551080703735s
+Beginning of Epoch 9/10, curr_step:6680/8200 curr_loss 0.031646728515625 lr:1.2062093865360458e-05 use time:14.437302827835083s
+Beginning of Epoch 9/10, curr_step:6690/8200 curr_loss 0.0005540847778320312 lr:1.1952291877913469e-05 use time:14.419358253479004s
+Beginning of Epoch 9/10, curr_step:6700/8200 curr_loss 0.006984710693359375 lr:1.184292406259092e-05 use time:13.87729024887085s
+Beginning of Epoch 9/10, curr_step:6710/8200 curr_loss 0.0012912750244140625 lr:1.1733991667416928e-05 use time:13.600569725036621s
+[2024-12-12 02:30:29,820] [INFO] [logging.py:96:log_dist] [Rank 0] step=840, skipped=15, lr=[1.1517438104753386e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:30:29,834] [INFO] [timer.py:264:stop] epoch=8/micro_step=160/global_step=840, RunningAvgSamplesPerSec=5.6670447443628, CurrSamplesPerSec=5.766098826335518, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 9/10, curr_step:6720/8200 curr_loss 0.1800537109375 lr:1.1517438104753386e-05 use time:14.312316179275513s
+Beginning of Epoch 9/10, curr_step:6730/8200 curr_loss 0.036041259765625 lr:1.1409819408411898e-05 use time:14.24963927268982s
+Beginning of Epoch 9/10, curr_step:6740/8200 curr_loss 0.8759765625 lr:1.1302641074486908e-05 use time:13.832479000091553s
+Beginning of Epoch 9/10, curr_step:6750/8200 curr_loss 0.02783203125 lr:1.1195904326017759e-05 use time:15.029639720916748s
+Beginning of Epoch 9/10, curr_step:6760/8200 curr_loss 0.00543212890625 lr:1.0983760452395413e-05 use time:14.107461929321289s
+Beginning of Epoch 9/10, curr_step:6770/8200 curr_loss 0.01331329345703125 lr:1.0878355748070179e-05 use time:14.698848247528076s
+Beginning of Epoch 9/10, curr_step:6780/8200 curr_loss 0.1097412109375 lr:1.0773397470829145e-05 use time:14.176586866378784s
+Beginning of Epoch 9/10, curr_step:6790/8200 curr_loss 0.0268402099609375 lr:1.0668886818378021e-05 use time:13.866227388381958s
+[2024-12-12 02:32:23,836] [INFO] [logging.py:96:log_dist] [Rank 0] step=850, skipped=15, lr=[1.046121315311508e-05], mom=[(0.9, 0.95)]
+[2024-12-12 02:32:23,851] [INFO] [timer.py:264:stop] epoch=8/micro_step=240/global_step=850, RunningAvgSamplesPerSec=5.666703430778884, CurrSamplesPerSec=5.956619719567807, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 9/10, curr_step:6800/8200 curr_loss 0.107666015625 lr:1.046121315311508e-05 use time:13.70124888420105s
+Beginning of Epoch 9/10, curr_step:6810/8200 curr_loss 0.22021484375 lr:1.0358052510120536e-05 use time:13.726378202438354s
+Beginning of Epoch 9/10, curr_step:6820/8200 curr_loss 0.046783447265625 lr:1.0255344231523451e-05 use time:13.752410173416138s
+Beginning of Epoch 9/10, curr_step:6830/8200 curr_loss 0.052337646484375 lr:1.0153089489354257e-05 use time:13.870805501937866s
+Beginning of Epoch 9/10, curr_step:6840/8200 curr_loss 0.0105743408203125 lr:9.949945276530781e-06 use time:14.551286935806274s
+Beginning of Epoch 9/10, curr_step:6850/8200 curr_loss 0.09283447265625 lr:9.849058124007043e-06 use time:14.104240655899048s
+Beginning of Epoch 9/10, curr_step:6860/8200 curr_loss 0.27685546875 lr:9.748629144145827e-06 use time:14.521991491317749s
+Beginning of Epoch 9/10, curr_step:6870/8200 curr_loss 0.023895263671875 lr:9.648659482967898e-06 use time:13.87260127067566s
+[2024-12-12 02:34:16,531] [INFO] [logging.py:96:log_dist] [Rank 0] step=860, skipped=15, lr=[9.450102674524952e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:34:16,546] [INFO] [timer.py:264:stop] epoch=8/micro_step=320/global_step=860, RunningAvgSamplesPerSec=5.667121541518579, CurrSamplesPerSec=5.575918249817016, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 9/10, curr_step:6880/8200 curr_loss 0.056427001953125 lr:9.450102674524952e-06 use time:14.214599609375s
+Beginning of Epoch 9/10, curr_step:6890/8200 curr_loss 0.2139892578125 lr:9.351517793042408e-06 use time:13.909297466278076s
+Beginning of Epoch 9/10, curr_step:6900/8200 curr_loss 0.026611328125 lr:9.253396761782308e-06 use time:13.928664207458496s
+Beginning of Epoch 9/10, curr_step:6910/8200 curr_loss 0.00388336181640625 lr:9.15574070042881e-06 use time:14.528993129730225s
+Beginning of Epoch 9/10, curr_step:6920/8200 curr_loss 0.103515625 lr:8.961827939636196e-06 use time:14.431655406951904s
+Beginning of Epoch 9/10, curr_step:6930/8200 curr_loss 0.04833984375 lr:8.865573452985143e-06 use time:14.604811429977417s
+Beginning of Epoch 9/10, curr_step:6940/8200 curr_loss 0.1060791015625 lr:8.76978836179162e-06 use time:13.735661506652832s
+Beginning of Epoch 9/10, curr_step:6950/8200 curr_loss 0.04327392578125 lr:8.674473759083801e-06 use time:14.20682954788208s
+[2024-12-12 02:36:10,050] [INFO] [logging.py:96:log_dist] [Rank 0] step=870, skipped=15, lr=[8.485260364381187e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:36:10,065] [INFO] [timer.py:264:stop] epoch=8/micro_step=400/global_step=870, RunningAvgSamplesPerSec=5.667074365121955, CurrSamplesPerSec=5.606911207605183, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 9/10, curr_step:6960/8200 curr_loss 0.34228515625 lr:8.485260364381187e-06 use time:14.468624591827393s
+Beginning of Epoch 9/10, curr_step:6970/8200 curr_loss 0.0080413818359375 lr:8.391363731548812e-06 use time:14.213536262512207s
+Beginning of Epoch 9/10, curr_step:6980/8200 curr_loss 0.0877685546875 lr:8.297941905502327e-06 use time:14.231905460357666s
+Beginning of Epoch 9/10, curr_step:6990/8200 curr_loss 0.08746337890625 lr:8.204995952302087e-06 use time:15.112571239471436s
+Beginning of Epoch 9/10, curr_step:7000/8200 curr_loss 0.056427001953125 lr:8.02053590151805e-06 use time:14.551351308822632s
+Beginning of Epoch 9/10, curr_step:7010/8200 curr_loss 0.03607177734375 lr:7.929023908855066e-06 use time:13.666451454162598s
+Beginning of Epoch 9/10, curr_step:7020/8200 curr_loss 0.08319091796875 lr:7.837991998855897e-06 use time:14.332389116287231s
+Beginning of Epoch 9/10, curr_step:7030/8200 curr_loss 0.001964569091796875 lr:7.747441210308937e-06 use time:13.999711751937866s
+[2024-12-12 02:38:04,744] [INFO] [logging.py:96:log_dist] [Rank 0] step=880, skipped=15, lr=[7.5677871252624485e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:38:04,759] [INFO] [timer.py:264:stop] epoch=8/micro_step=480/global_step=880, RunningAvgSamplesPerSec=5.666344869492873, CurrSamplesPerSec=5.6551870766711865, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 9/10, curr_step:7040/8200 curr_loss 0.1796875 lr:7.5677871252624485e-06 use time:14.183514833450317s
+Beginning of Epoch 9/10, curr_step:7050/8200 curr_loss 0.00815582275390625 lr:7.47868587884163e-06 use time:14.011809349060059s
+Beginning of Epoch 9/10, curr_step:7060/8200 curr_loss 0.000980377197265625 lr:7.390069854007026e-06 use time:14.254652976989746s
+Beginning of Epoch 9/10, curr_step:7070/8200 curr_loss 0.1517333984375 lr:7.3019400619787236e-06 use time:14.50174331665039s
+Beginning of Epoch 9/10, curr_step:7080/8200 curr_loss 0.08270263671875 lr:7.127143193467445e-06 use time:14.153538227081299s
+Beginning of Epoch 9/10, curr_step:7090/8200 curr_loss 0.00252532958984375 lr:7.040478111636228e-06 use time:14.092280149459839s
+Beginning of Epoch 9/10, curr_step:7100/8200 curr_loss 0.002811431884765625 lr:6.954303251892069e-06 use time:14.216623783111572s
+Beginning of Epoch 9/10, curr_step:7110/8200 curr_loss 0.0157928466796875 lr:6.868619597598347e-06 use time:14.14260745048523s
+[2024-12-12 02:39:57,864] [INFO] [logging.py:96:log_dist] [Rank 0] step=890, skipped=15, lr=[6.698729810778065e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:39:57,879] [INFO] [timer.py:264:stop] epoch=8/micro_step=560/global_step=890, RunningAvgSamplesPerSec=5.666524236626697, CurrSamplesPerSec=5.757148390081826, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 9/10, curr_step:7120/8200 curr_loss 0.002910614013671875 lr:6.698729810778065e-06 use time:14.159692764282227s
+Beginning of Epoch 9/10, curr_step:7130/8200 curr_loss 0.0767822265625 lr:6.6145256169073185e-06 use time:13.877202987670898s
+Beginning of Epoch 9/10, curr_step:7140/8200 curr_loss 0.007171630859375 lr:6.530816505776444e-06 use time:13.794551372528076s
+Beginning of Epoch 9/10, curr_step:7150/8200 curr_loss 0.011810302734375 lr:6.447603432611532e-06 use time:14.055364608764648s
+Beginning of Epoch 9/10, curr_step:7160/8200 curr_loss 0.0017375946044921875 lr:6.282669192770896e-06 use time:14.396439552307129s
+Beginning of Epoch 9/10, curr_step:7170/8200 curr_loss 0.0274810791015625 lr:6.2009499082019585e-06 use time:13.790080785751343s
+Beginning of Epoch 9/10, curr_step:7180/8200 curr_loss 0.037109375 lr:6.119730425791059e-06 use time:14.463374376296997s
+Beginning of Epoch 9/10, curr_step:7190/8200 curr_loss 0.0031414031982421875 lr:6.0390116723544554e-06 use time:13.906599521636963s
+[2024-12-12 02:41:50,633] [INFO] [logging.py:96:log_dist] [Rank 0] step=900, skipped=15, lr=[5.879080031089046e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:41:50,648] [INFO] [timer.py:264:stop] epoch=8/micro_step=640/global_step=900, RunningAvgSamplesPerSec=5.666911303300377, CurrSamplesPerSec=5.605132113428055, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 9/10, curr_step:7200/8200 curr_loss 0.0157928466796875 lr:5.879080031089046e-06 use time:14.251317977905273s
+Beginning of Epoch 9/10, curr_step:7210/8200 curr_loss 0.002506256103515625 lr:5.7998689682810746e-06 use time:13.729686737060547s
+Beginning of Epoch 9/10, curr_step:7220/8200 curr_loss 0.002197265625 lr:5.72116228446829e-06 use time:14.05741286277771s
+Beginning of Epoch 9/10, curr_step:7230/8200 curr_loss 0.0309906005859375 lr:5.642960877792752e-06 use time:14.046685457229614s
+Beginning of Epoch 9/10, curr_step:7240/8200 curr_loss 0.45068359375 lr:5.488077459582425e-06 use time:14.294935941696167s
+Beginning of Epoch 9/10, curr_step:7250/8200 curr_loss 0.1627197265625 lr:5.411397215461905e-06 use time:13.446008682250977s
+Beginning of Epoch 9/10, curr_step:7260/8200 curr_loss 0.0155792236328125 lr:5.335225783287051e-06 use time:14.161436319351196s
+Beginning of Epoch 9/10, curr_step:7270/8200 curr_loss 0.138671875 lr:5.259564032269537e-06 use time:15.07819390296936s
+[2024-12-12 02:43:43,628] [INFO] [logging.py:96:log_dist] [Rank 0] step=910, skipped=15, lr=[5.109773021462921e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:43:43,643] [INFO] [timer.py:264:stop] epoch=8/micro_step=720/global_step=910, RunningAvgSamplesPerSec=5.667167968725263, CurrSamplesPerSec=5.811051950499697, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 9/10, curr_step:7280/8200 curr_loss 0.094970703125 lr:5.109773021462921e-06 use time:14.269679069519043s
+Beginning of Epoch 9/10, curr_step:7290/8200 curr_loss 0.042572021484375 lr:5.03564547097734e-06 use time:13.829338312149048s
+Beginning of Epoch 9/10, curr_step:7300/8200 curr_loss 0.06463623046875 lr:4.96203102023664e-06 use time:14.015284776687622s
+Beginning of Epoch 9/10, curr_step:7310/8200 curr_loss 0.1259765625 lr:4.888930509274126e-06 use time:14.36467981338501s
+Beginning of Epoch 9/10, curr_step:7320/8200 curr_loss 0.09063720703125 lr:4.744274637483936e-06 use time:14.079199075698853s
+Beginning of Epoch 9/10, curr_step:7330/8200 curr_loss 0.37060546875 lr:4.672720927361412e-06 use time:14.42905879020691s
+Beginning of Epoch 9/10, curr_step:7340/8200 curr_loss 0.0045623779296875 lr:4.601684458408506e-06 use time:14.293492794036865s
+Beginning of Epoch 9/10, curr_step:7350/8200 curr_loss 0.0239410400390625 lr:4.531166041240531e-06 use time:13.971606969833374s
+[2024-12-12 02:45:36,947] [INFO] [loss_scaler.py:190:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, but hysteresis is 2. Reducing hysteresis to 1
+[2024-12-12 02:45:36,948] [INFO] [logging.py:96:log_dist] [Rank 0] step=920, skipped=16, lr=[4.46116648056118e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:45:36,949] [INFO] [timer.py:264:stop] epoch=8/micro_step=800/global_step=920, RunningAvgSamplesPerSec=5.6672220482632705, CurrSamplesPerSec=5.7502340197373325, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 9/10, curr_step:7360/8200 curr_loss 0.244140625 lr:4.46116648056118e-06 use time:14.252801179885864s
+[2024-12-12 02:45:48,104] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, reducing to 65536
+Beginning of Epoch 9/10, curr_step:7370/8200 curr_loss 0.138671875 lr:4.46116648056118e-06 use time:13.90884280204773s
+saving model ...
+saving success ...
+Beginning of Epoch 10/10, Total Micro Batches 820
+Beginning of Epoch 10/10, curr_step:7380/8200 curr_loss 0.004009246826171875 lr:4.391686575153331e-06 use time:14.565009355545044s
+Beginning of Epoch 10/10, curr_step:7390/8200 curr_loss 0.095458984375 lr:4.322727117869951e-06 use time:13.409247398376465s
+Beginning of Epoch 10/10, curr_step:7400/8200 curr_loss 0.0126190185546875 lr:4.186372689384654e-06 use time:14.737759351730347s
+Beginning of Epoch 10/10, curr_step:7410/8200 curr_loss 0.0066375732421875 lr:4.118979274157964e-06 use time:14.686279058456421s
+Beginning of Epoch 10/10, curr_step:7420/8200 curr_loss 0.0004317760467529297 lr:4.05210941898847e-06 use time:14.05769944190979s
+Beginning of Epoch 10/10, curr_step:7430/8200 curr_loss 0.0025310516357421875 lr:3.985763886945188e-06 use time:14.468560457229614s
+[2024-12-12 02:47:30,756] [INFO] [logging.py:96:log_dist] [Rank 0] step=930, skipped=17, lr=[3.854648814588763e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:47:30,771] [INFO] [timer.py:264:stop] epoch=9/micro_step=60/global_step=930, RunningAvgSamplesPerSec=5.667506965291748, CurrSamplesPerSec=5.7854755482330695, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 10/10, curr_step:7440/8200 curr_loss 0.08563232421875 lr:3.854648814588763e-06 use time:13.958594799041748s
+Beginning of Epoch 10/10, curr_step:7450/8200 curr_loss 0.041259765625 lr:3.7898807704632167e-06 use time:14.028880596160889s
+Beginning of Epoch 10/10, curr_step:7460/8200 curr_loss 0.0181427001953125 lr:3.7256400418220262e-06 use time:14.363330841064453s
+Beginning of Epoch 10/10, curr_step:7470/8200 curr_loss 0.0079803466796875 lr:3.66192736173257e-06 use time:14.237750053405762s
+Beginning of Epoch 10/10, curr_step:7480/8200 curr_loss 0.004119873046875 lr:3.536089049341623e-06 use time:14.242807149887085s
+Beginning of Epoch 10/10, curr_step:7490/8200 curr_loss 0.0506591796875 lr:3.473964853013273e-06 use time:13.939175128936768s
+Beginning of Epoch 10/10, curr_step:7500/8200 curr_loss 0.08642578125 lr:3.4123715771665786e-06 use time:14.143605947494507s
+Beginning of Epoch 10/10, curr_step:7510/8200 curr_loss 0.0006928443908691406 lr:3.3513099246581637e-06 use time:14.133379936218262s
+[2024-12-12 02:49:23,708] [INFO] [logging.py:96:log_dist] [Rank 0] step=940, skipped=17, lr=[3.230784270742232e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:49:23,723] [INFO] [timer.py:264:stop] epoch=9/micro_step=140/global_step=940, RunningAvgSamplesPerSec=5.667763867714586, CurrSamplesPerSec=5.84125913394969, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 10/10, curr_step:7520/8200 curr_loss 0.158203125 lr:3.230784270742232e-06 use time:13.969585180282593s
+Beginning of Epoch 10/10, curr_step:7530/8200 curr_loss 0.08843994140625 lr:3.171321644683761e-06 use time:14.034940004348755s
+Beginning of Epoch 10/10, curr_step:7540/8200 curr_loss 0.0029735565185546875 lr:3.112393392645985e-06 use time:14.357592105865479s
+Beginning of Epoch 10/10, curr_step:7550/8200 curr_loss 0.09002685546875 lr:3.054000187074224e-06 use time:14.42653512954712s
+Beginning of Epoch 10/10, curr_step:7560/8200 curr_loss 0.059051513671875 lr:2.938821574574835e-06 use time:13.87486457824707s
+Beginning of Epoch 10/10, curr_step:7570/8200 curr_loss 0.006847381591796875 lr:2.8820374819798045e-06 use time:14.758022785186768s
+Beginning of Epoch 10/10, curr_step:7580/8200 curr_loss 0.08514404296875 lr:2.825791064500993e-06 use time:13.446635723114014s
+Beginning of Epoch 10/10, curr_step:7590/8200 curr_loss 0.2001953125 lr:2.770082963980647e-06 use time:14.82367467880249s
+[2024-12-12 02:51:17,723] [INFO] [logging.py:96:log_dist] [Rank 0] step=950, skipped=17, lr=[2.6602842504627303e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:51:17,738] [INFO] [timer.py:264:stop] epoch=9/micro_step=220/global_step=950, RunningAvgSamplesPerSec=5.667446688801538, CurrSamplesPerSec=5.615593147631699, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 10/10, curr_step:7600/8200 curr_loss 0.0005936622619628906 lr:2.6602842504627303e-06 use time:14.33555555343628s
+Beginning of Epoch 10/10, curr_step:7610/8200 curr_loss 0.2056884765625 lr:2.606194890406366e-06 use time:13.786693811416626s
+Beginning of Epoch 10/10, curr_step:7620/8200 curr_loss 0.135498046875 lr:2.5526463531765465e-06 use time:14.017579793930054s
+Beginning of Epoch 10/10, curr_step:7630/8200 curr_loss 0.1722412109375 lr:2.499639249829333e-06 use time:13.92588496208191s
+Beginning of Epoch 10/10, curr_step:7640/8200 curr_loss 0.01081085205078125 lr:2.395251758107786e-06 use time:13.901951313018799s
+Beginning of Epoch 10/10, curr_step:7650/8200 curr_loss 0.0012607574462890625 lr:2.343872560925814e-06 use time:14.351777076721191s
+Beginning of Epoch 10/10, curr_step:7660/8200 curr_loss 0.092041015625 lr:2.2930371799975594e-06 use time:14.70041823387146s
+Beginning of Epoch 10/10, curr_step:7670/8200 curr_loss 0.1767578125 lr:2.242746195418549e-06 use time:13.973638534545898s
+[2024-12-12 02:53:11,012] [INFO] [logging.py:96:log_dist] [Rank 0] step=960, skipped=17, lr=[2.143799704622601e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:53:11,027] [INFO] [timer.py:264:stop] epoch=9/micro_step=300/global_step=960, RunningAvgSamplesPerSec=5.667527865995111, CurrSamplesPerSec=5.465356272949519, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 10/10, curr_step:7680/8200 curr_loss 0.0012292861938476562 lr:2.143799704622601e-06 use time:14.465837478637695s
+Beginning of Epoch 10/10, curr_step:7690/8200 curr_loss 0.01305389404296875 lr:2.095145327509368e-06 use time:13.873358249664307s
+Beginning of Epoch 10/10, curr_step:7700/8200 curr_loss 0.0065765380859375 lr:2.047037604939894e-06 use time:14.02139925956726s
+Beginning of Epoch 10/10, curr_step:7710/8200 curr_loss 0.09716796875 lr:1.999477085883711e-06 use time:13.983049869537354s
+Beginning of Epoch 10/10, curr_step:7720/8200 curr_loss 0.00927734375 lr:1.905999822961707e-06 use time:14.29825496673584s
+Beginning of Epoch 10/10, curr_step:7730/8200 curr_loss 0.006580352783203125 lr:1.8600841457888263e-06 use time:14.434454917907715s
+Beginning of Epoch 10/10, curr_step:7740/8200 curr_loss 0.51513671875 lr:1.8147178055029579e-06 use time:14.288848638534546s
+Beginning of Epoch 10/10, curr_step:7750/8200 curr_loss 0.005229949951171875 lr:1.7699013197909954e-06 use time:14.545771598815918s
+[2024-12-12 02:55:04,021] [INFO] [logging.py:96:log_dist] [Rank 0] step=970, skipped=17, lr=[1.6819199514579553e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:55:04,036] [INFO] [timer.py:264:stop] epoch=9/micro_step=380/global_step=970, RunningAvgSamplesPerSec=5.667736828550899, CurrSamplesPerSec=5.939691524360863, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 10/10, curr_step:7760/8200 curr_loss 0.09698486328125 lr:1.6819199514579553e-06 use time:13.61681079864502s
+Beginning of Epoch 10/10, curr_step:7770/8200 curr_loss 0.00687408447265625 lr:1.638756072814751e-06 use time:13.769091844558716s
+Beginning of Epoch 10/10, curr_step:7780/8200 curr_loss 0.0023517608642578125 lr:1.5961440566897912e-06 use time:14.222513437271118s
+Beginning of Epoch 10/10, curr_step:7790/8200 curr_loss 0.04522705078125 lr:1.554084389339655e-06 use time:14.582401990890503s
+Beginning of Epoch 10/10, curr_step:7800/8200 curr_loss 0.0025691986083984375 lr:1.471624014469919e-06 use time:14.497301578521729s
+Beginning of Epoch 10/10, curr_step:7810/8200 curr_loss 0.04058837890625 lr:1.4312242479267213e-06 use time:14.835585355758667s
+Beginning of Epoch 10/10, curr_step:7820/8200 curr_loss 0.000942230224609375 lr:1.3913787121004719e-06 use time:14.844547271728516s
+Beginning of Epoch 10/10, curr_step:7830/8200 curr_loss 0.005077362060546875 lr:1.3520878616787525e-06 use time:14.0631685256958s
+[2024-12-12 02:56:58,938] [INFO] [logging.py:96:log_dist] [Rank 0] step=980, skipped=17, lr=[1.2751720041459082e-06], mom=[(0.9, 0.95)]
+[2024-12-12 02:56:58,952] [INFO] [timer.py:264:stop] epoch=9/micro_step=460/global_step=980, RunningAvgSamplesPerSec=5.666969412053315, CurrSamplesPerSec=5.74287730992209, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 10/10, curr_step:7840/8200 curr_loss 0.1937255859375 lr:1.2751720041459082e-06 use time:14.130447149276733s
+Beginning of Epoch 10/10, curr_step:7850/8200 curr_loss 0.004123687744140625 lr:1.2375478747413017e-06 use time:14.182633399963379s
+Beginning of Epoch 10/10, curr_step:7860/8200 curr_loss 0.1776123046875 lr:1.2004801861442371e-06 use time:14.236345052719116s
+Beginning of Epoch 10/10, curr_step:7870/8200 curr_loss 0.0005998611450195312 lr:1.163969361343592e-06 use time:13.828379392623901s
+Beginning of Epoch 10/10, curr_step:7880/8200 curr_loss 0.005084991455078125 lr:1.0926199633097157e-06 use time:14.106276035308838s
+Beginning of Epoch 10/10, curr_step:7890/8200 curr_loss 0.006229400634765625 lr:1.0577822042627084e-06 use time:14.873372077941895s
+Beginning of Epoch 10/10, curr_step:7900/8200 curr_loss 0.046142578125 lr:1.0235029373752758e-06 use time:13.932657480239868s
+Beginning of Epoch 10/10, curr_step:7910/8200 curr_loss 0.005496978759765625 lr:9.897825538168925e-07 use time:13.859096050262451s
+[2024-12-12 02:58:52,671] [INFO] [logging.py:96:log_dist] [Rank 0] step=990, skipped=17, lr=[9.240199694729945e-07], mom=[(0.9, 0.95)]
+[2024-12-12 02:58:52,687] [INFO] [timer.py:264:stop] epoch=9/micro_step=540/global_step=990, RunningAvgSamplesPerSec=5.666811172241567, CurrSamplesPerSec=5.471278946293173, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 10/10, curr_step:7920/8200 curr_loss 0.006313323974609375 lr:9.240199694729945e-07 use time:14.658250093460083s
+Beginning of Epoch 10/10, curr_step:7930/8200 curr_loss 0.013916015625 lr:8.919785191211394e-07 use time:13.775251388549805s
+Beginning of Epoch 10/10, curr_step:7940/8200 curr_loss 0.0008525848388671875 lr:8.604974529571042e-07 use time:14.18117380142212s
+Beginning of Epoch 10/10, curr_step:7950/8200 curr_loss 0.0246734619140625 lr:8.295771302193722e-07 use time:14.027205467224121s
+Beginning of Epoch 10/10, curr_step:7960/8200 curr_loss 0.093017578125 lr:7.69420119978842e-07 use time:14.215192556381226s
+Beginning of Epoch 10/10, curr_step:7970/8200 curr_loss 0.006862640380859375 lr:7.401841189430658e-07 use time:14.079048156738281s
+Beginning of Epoch 10/10, curr_step:7980/8200 curr_loss 0.0085906982421875 lr:7.115102342598101e-07 use time:14.24273681640625s
+Beginning of Epoch 10/10, curr_step:7990/8200 curr_loss 0.018829345703125 lr:6.833987931341046e-07 use time:14.197741746902466s
+[2024-12-12 03:00:45,938] [INFO] [logging.py:96:log_dist] [Rank 0] step=1000, skipped=17, lr=[6.288645182808584e-07], mom=[(0.9, 0.95)]
+[2024-12-12 03:00:45,953] [INFO] [timer.py:264:stop] epoch=9/micro_step=620/global_step=1000, RunningAvgSamplesPerSec=5.6668878956433195, CurrSamplesPerSec=5.484826831789834, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 10/10, curr_step:8000/8200 curr_loss 0.0092010498046875 lr:6.288645182808584e-07 use time:14.485048532485962s
+Beginning of Epoch 10/10, curr_step:8010/8200 curr_loss 0.04766845703125 lr:6.0244230685787e-07 use time:14.074832677841187s
+Beginning of Epoch 10/10, curr_step:8020/8200 curr_loss 0.057159423828125 lr:5.765837835944309e-07 use time:14.751004934310913s
+Beginning of Epoch 10/10, curr_step:8030/8200 curr_loss 0.090576171875 lr:5.512892435687645e-07 use time:13.523483037948608s
+Beginning of Epoch 10/10, curr_step:8040/8200 curr_loss 0.008636474609375 lr:5.023932613615445e-07 use time:14.143308877944946s
+Beginning of Epoch 10/10, curr_step:8050/8200 curr_loss 0.12103271484375 lr:4.787923771445435e-07 use time:14.387485265731812s
+Beginning of Epoch 10/10, curr_step:8060/8200 curr_loss 0.0926513671875 lr:4.55756592088058e-07 use time:14.374375343322754s
+Beginning of Epoch 10/10, curr_step:8070/8200 curr_loss 0.216552734375 lr:4.33286169059316e-07 use time:13.92405366897583s
+[2024-12-12 03:02:39,318] [INFO] [logging.py:96:log_dist] [Rank 0] step=1010, skipped=17, lr=[3.900424282936077e-07], mom=[(0.9, 0.95)]
+[2024-12-12 03:02:39,333] [INFO] [timer.py:264:stop] epoch=9/micro_step=700/global_step=1010, RunningAvgSamplesPerSec=5.66689967581157, CurrSamplesPerSec=5.622299428026798, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 10/10, curr_step:8080/8200 curr_loss 0.0911865234375 lr:3.900424282936077e-07 use time:14.203937530517578s
+Beginning of Epoch 10/10, curr_step:8090/8200 curr_loss 0.01320648193359375 lr:3.692696040220267e-07 use time:14.987629413604736s
+Beginning of Epoch 10/10, curr_step:8100/8200 curr_loss 0.2081298828125 lr:3.490631287033197e-07 use time:14.105394840240479s
+Beginning of Epoch 10/10, curr_step:8110/8200 curr_loss 0.0177764892578125 lr:3.2942323291874076e-07 use time:14.039194583892822s
+Beginning of Epoch 10/10, curr_step:8120/8200 curr_loss 0.0176544189453125 lr:2.9184406994753334e-07 use time:13.975112915039062s
+Beginning of Epoch 10/10, curr_step:8130/8200 curr_loss 0.002422332763671875 lr:2.7390523158633554e-07 use time:14.205293416976929s
+Beginning of Epoch 10/10, curr_step:8140/8200 curr_loss 0.006237030029296875 lr:2.5653383040524227e-07 use time:13.93782925605774s
+Beginning of Epoch 10/10, curr_step:8150/8200 curr_loss 0.00827789306640625 lr:2.3973006463376414e-07 use time:14.55678677558899s
+[2024-12-12 03:04:33,384] [INFO] [logging.py:96:log_dist] [Rank 0] step=1020, skipped=17, lr=[2.0782619984827666e-07], mom=[(0.9, 0.95)]
+[2024-12-12 03:04:33,399] [INFO] [timer.py:264:stop] epoch=9/micro_step=780/global_step=1020, RunningAvgSamplesPerSec=5.666579735809892, CurrSamplesPerSec=5.591166867239196, MemAllocated=10.21GB, MaxMemAllocated=49.41GB
+Beginning of Epoch 10/10, curr_step:8160/8200 curr_loss 0.00046896934509277344 lr:2.0782619984827666e-07 use time:14.281142473220825s
+Beginning of Epoch 10/10, curr_step:8170/8200 curr_loss 0.26513671875 lr:1.9272646489743029e-07 use time:13.855775117874146s
+[2024-12-12 03:04:55,782] [INFO] [loss_scaler.py:190:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, but hysteresis is 2. Reducing hysteresis to 1
+Beginning of Epoch 10/10, curr_step:8180/8200 curr_loss 0.0474853515625 lr:1.9272646489743029e-07 use time:13.968561887741089s
+[2024-12-12 03:05:06,727] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 131072, reducing to 65536
+Beginning of Epoch 10/10, curr_step:8190/8200 curr_loss 0.1573486328125 lr:1.9272646489743029e-07 use time:13.788962602615356s
+saving model ...
+saving success ...
+saving model ...
+saving success ...
+[2024-12-12 03:05:31,335] [INFO] [launch.py:351:main] Process 2629 exits successfully.
+[rank0]:[W1212 03:05:31.230297106 ProcessGroupNCCL.cpp:1168] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+[2024-12-12 03:05:33,337] [INFO] [launch.py:351:main] Process 2628 exits successfully.
