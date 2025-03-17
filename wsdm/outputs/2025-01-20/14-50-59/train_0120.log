@@ -1,0 +1,8 @@
+[2025-01-20 14:51:01,060][utils.train_utils][INFO] - Distributed environment: DistributedType.MULTI_GPU  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: no
+
