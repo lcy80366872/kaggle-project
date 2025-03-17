@@ -1,1 +1,0 @@
-nohup accelerate launch train_ranker_listwise.py --config-name conf_listwise_72b use_wandb=false full_fit=true > log_list_train.txt 2>&1
