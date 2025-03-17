@@ -1,4 +1,4 @@
-# Eedi - Mining Misconceptions in Mathematics
+# WSDM Cup - Multilingual Chatbot Arena
 
 This repo contains my solution code for the `WSDM Cup - Multilingual Chatbot Arena` Kaggle competition, which won 5st place. The full solution is described [here](https://www.kaggle.com/competitions/wsdm-cup-multilingual-chatbot-arena/discussion/567856). Please refer to the following sections for details on dependencies, training. If you run into any issues with the setup/code or have any questions/suggestions, please feel free to contact me at `chenyulin@mail.nankai.edu.cn`. Thanks!
 
