@@ -13,7 +13,7 @@ The models were trained on an instance with the following specifications:
 To train the models,please clone the repo and install the dependencies.
 
 ```
-git clone https://github.com/rbiswasfc/eedi-mining-misconceptions.git
+git clone https://github.com/lcy80366872/kaggle-project.git
 cd wsdm
 conda create -n  wsdm python=3.11
 conda activate wsdm
