@@ -214,6 +214,7 @@ def find_token_instruction_masking(input_ids, token_pattern):
             found = True
             break
     if not found:
+        
         print("not found!")
         ret=0  # If not found, return 0 # assuming left truncation
     return ret
